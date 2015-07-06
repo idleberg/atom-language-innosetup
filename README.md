@@ -5,7 +5,7 @@
 [![Travis](https://img.shields.io/travis/idleberg/language-inno.svg?style=flat-square)](https://travis-ci.org/idleberg/language-inno)
 [![David](https://img.shields.io/david/dev/idleberg/language-inno.svg?style=flat-square)](https://david-dm.org/idleberg/language-inno#info=devDependencies)
 
-Atom language support for [InnoSetup](https://github.com/jrsoftware/issrc)
+Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc)
 
 ## Installation
 
