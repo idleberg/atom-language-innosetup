@@ -1,7 +1,8 @@
 # Inno Setup for Atom
 
-[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/apm/v/language-inno.svg?style=flat-square)](https://atom.io/packages/language-inno)
+[![apm](https://img.shields.io/apm/l/language-inno.svg?style=flat-square)](https://atom.io/packages/language-inno)
+[![apm](https://img.shields.io/apm/v/language-inno.svg?style=flat-square)](https://atom.io/packages/language-inno)
+[![apm](https://img.shields.io/apm/dm/language-inno.svg?style=flat-square)](https://atom.io/packages/language-inno)
 [![Travis](https://img.shields.io/travis/idleberg/atom-language-inno.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-inno)
 [![David](https://img.shields.io/david/dev/idleberg/atom-language-inno.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-inno#info=devDependencies)
 
