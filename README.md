@@ -17,7 +17,7 @@ Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc)
 ### GitHub
 
 1. Change directory to `~/.atom/packages/`
-2. Clone repository `git clone https://github.com/idleberg/atom-language-inno.git language-inno`
+2. Clone repository `git clone https://github.com/idleberg/atom-language-inno language-inno`
 
 ## License
 
