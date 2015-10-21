@@ -2,14 +2,14 @@ fileTypes: [
   "iss"
   "isl"
 ]
-name: "InnoSetup"
+name: "Inno Setup"
 comment: "https://github.com/idleberg/InnoSetup-Sublime-Text"
 patterns: [
   {
     captures:
       "1":
         name: "punctuation.definition.comment.inno"
-    match: "^\\s*(;|#).*$\\n?"
+    match: "^\\s*(;|#\s).*$\\n?"
     name: "comment.line.semicolon.inno"
   }
   {
