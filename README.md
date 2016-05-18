@@ -6,7 +6,7 @@
 [![Travis](https://img.shields.io/travis/idleberg/atom-language-inno.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-inno)
 [![David](https://img.shields.io/david/dev/idleberg/atom-language-inno.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-inno#info=devDependencies)
 
-Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc), including grammar and a rudimentary build system
+Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc), including grammar, snippets and a rudimentary build system
 
 ![Screenshot](https://raw.githubusercontent.com/idleberg/atom-language-inno/master/screenshot.png)
 
