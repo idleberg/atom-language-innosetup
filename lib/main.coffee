@@ -3,7 +3,7 @@
 
 module.exports = InnoSetupCore =
   subscriptions: null
-  debug: true
+  debug: false
   which: null
   prefix: null
 
