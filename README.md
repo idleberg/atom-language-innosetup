@@ -6,18 +6,50 @@
 [![Travis](https://img.shields.io/travis/idleberg/atom-language-inno.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-inno)
 [![David](https://img.shields.io/david/dev/idleberg/atom-language-inno.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-inno#info=devDependencies)
 
-Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc)
+Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc), including grammar, snippets and a rudimentary build system
 
 ## Installation
 
 ### apm
 
-* Install package `apm install language-inno` (or use the GUI)
+Install `language-inno` from Atom's [Package Manager](http://flight-manual.atom.io/using-atom/sections/atom-packages/) or the command-line equivalent:
+
+`$ apm install language-inno`
 
 ### GitHub
 
-1. Change directory `cd ~/.atom/packages/`
-2. Clone repository `git clone https://github.com/idleberg/atom-language-inno language-inno`
+Change to your Atom packages directory:
+
+```bash
+# Windows
+$ cd %USERPROFILE%\.atom\packages
+
+# Mac OS X & Linux
+$ cd ~/.atom/packages/
+```
+
+Clone repository as `language-inno`:
+
+`$ git clone https://github.com/idleberg/atom-language-inno language-inno`
+
+## Usage
+
+### Building
+
+As of recently, this package contains a rudimentary build system to compile Inno Setup scripts. But first, make sure `makensis` is in your [PATH environmental variable](http://superuser.com/a/284351/195953). Alternatively, you can specify the path to `ISCC.exe` in your `config.cson`.
+
+**Example:**
+
+```cson
+"language-inno":
+  pathToISCC: "/full/path/to/ISCC.exe"
+```
+
+To compile your scripts, select *Inno Setup: Save & Compile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
+
+#### Third-party packages
+
+Should you already use the [build](https://atom.io/packages/build) package, you can install the [build-innosetup](https://atom.io/packages/build-innosetup) provider to build your code.
 
 ## License
 
