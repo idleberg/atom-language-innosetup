@@ -49,7 +49,7 @@ As of recently, this package contains a rudimentary build system to compile Inno
   pathToISCC: "/full/path/to/ISCC.exe"
 ```
 
-If you're on Mac OS X or Linux and would like to compile scripts with Wine, specify the path to this [bash script](https://gist.github.com/idleberg/4242e688ffe494e90a08bc4e83fe2b63) instead.
+**Note**: If you're on Mac OS X or Linux and would like to compile scripts with Wine, specify the path to this [bash script](https://gist.github.com/idleberg/4242e688ffe494e90a08bc4e83fe2b63) instead.
 
 To compile your scripts, select *Inno Setup: Save & Compile”* from the [command-palette](https://atom.io/docs/latest/getting-started-atom-basics#command-palette) or use the keyboard shortcut.
 
