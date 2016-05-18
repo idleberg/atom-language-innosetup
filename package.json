@@ -1,6 +1,6 @@
 {
   "name": "language-inno",
-  "version": "1.0.10",
+  "version": "2.0.0",
   "description": "Atom language support for Inno Setup",
   "author": {
     "name": "Jan T. Sott",
