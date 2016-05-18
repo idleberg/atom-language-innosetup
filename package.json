@@ -12,6 +12,12 @@
     "url": "https://github.com/idleberg/atom-language-inno"
   },
   "license": "MIT",
+  "main": "./lib/main",
+  "activationCommands": {
+    "atom-workspace": [
+      "inno-setup:save-&-compile"
+    ]
+  },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
