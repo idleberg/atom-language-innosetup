@@ -36,7 +36,7 @@ Clone repository as `language-inno`:
 
 ### Building
 
-As of recently, this package contains a rudimentary build system to compile Inno Setup scripts. But first, make sure `makensis` is in your [PATH environmental variable](http://superuser.com/a/284351/195953). Alternatively, you can specify the path to `ISCC.exe` in your `config.cson`.
+As of recently, this package contains a rudimentary build system to compile Inno Setup scripts. But first, make sure `ISCC.exe` is in your [PATH environmental variable](http://superuser.com/a/284351/195953). Alternatively, you can specify its path in your `config.cson`.
 
 **Example:**
 
