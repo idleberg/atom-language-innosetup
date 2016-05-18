@@ -8,6 +8,10 @@
 
 Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc), including grammar, snippets and a rudimentary build system
 
+![Screenshot](https://raw.github.com/idleberg/atom-language-inno/master/screenshot.png)
+
+*Screenshot of Inno Setup in Atom with [Hopscotch](https://atom.io/themes/hopscotch) theme*
+
 ## Installation
 
 ### apm
