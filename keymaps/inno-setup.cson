@@ -1,0 +1,6 @@
+# https://atom.io/docs/latest/advanced/keymaps
+'.platform-darwin atom-text-editor, .platform-linux atom-text-editor':
+  'cmd-alt-m': 'inno-setup:save-&-compile'
+
+'.platform-win32 atom-text-editor':
+  'shift-alt-m': 'inno-setup:save-&-compile'
