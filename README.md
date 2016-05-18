@@ -46,7 +46,7 @@ As of recently, this package contains a rudimentary build system to compile Inno
 
 ```cson
 "language-inno":
-  pathToISCC: "/full/path/to/ISCC.exe"
+  pathToISCC: "full\\path\\to\\ISCC.exe"
 ```
 
 **Note**: If you're on Mac OS X or Linux and would like to compile scripts with Wine, specify the path to this [bash script](https://gist.github.com/idleberg/4242e688ffe494e90a08bc4e83fe2b63) instead.
