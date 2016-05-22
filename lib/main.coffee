@@ -3,7 +3,6 @@
 
 module.exports = InnoSetupCore =
   subscriptions: null
-  debug: false
   which: null
   prefix: null
 
@@ -42,8 +41,8 @@ module.exports = InnoSetupCore =
     else
       # Something went wrong
       atom.beep()
-      if @debug?
-        console.log "[language-inno] scope: #{scope}"
+      if atom.config.get('language-inno.debug') is true
+        console.log "[language-inno] Scope: #{scope}"
 
   getPath: (callback) ->
     @getPlatform()
