@@ -24,7 +24,7 @@ module.exports = InnoSetupCore =
     scope  = editor.getGrammar().scopeName
 
     if script? and scope.startsWith 'source.inno'
-      editor.save()
+      editor.save() if editor.isModified()
 
       @getPath (stdout) ->
         isccBin  = atom.config.get('language-inno.pathToISCC')
