@@ -57,7 +57,10 @@ To compile your scripts, select *Inno Setup: Save & Compile”* from the [comman
 
 #### Third-party packages
 
-Should you already use the [build](https://atom.io/packages/build) package, you can install the [build-innosetup](https://atom.io/packages/build-innosetup) provider to build and lint your code.
+Should you prefer working with an existing third-party build system, the following packages already have support for Inno Setup.
+
+* [build](https://atom.io/packages/build) – requires additional provider (e.g. [build-innosetup](https://atom.io/packages/build-innosetup)), supports [linter](https://atom.io/packages/linter)
+* [script](https://atom.io/packages/script)
 
 ## License
 
