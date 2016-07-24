@@ -44,7 +44,12 @@ module.exports = InnoSetupCore =
         console.log "[language-inno] Scope: #{scope}"
 
   getPath: (callback) ->
-    @getPlatform()
+    os = require 'os'
+
+    if os.platform() is 'win32'
+      which  = "where"
+    else
+      which  = "which"
 
     # If stored, return pathToISCC
     pathToISCC = atom.config.get('language-inno.pathToISCC')
@@ -53,18 +58,10 @@ module.exports = InnoSetupCore =
       return
 
     # Find ISCC
-    exec "\"#{@which}\" ISCC", (error, stdout, stderr) ->
+    exec "\"#{which}\" ISCC", (error, stdout, stderr) ->
       if error isnt null
         atom.notifications.addError("**language-inno**: `ISCC.exe` is not in your PATH [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
       else
         atom.config.set('language-inno.pathToISCC', stdout.trim())
         callback stdout
       return
-
-  getPlatform: ->
-    os = require 'os'
-
-    if os.platform() is 'win32'
-      @which  = "where"
-    else
-      @which  = "which"
