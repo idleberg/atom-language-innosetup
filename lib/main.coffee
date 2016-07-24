@@ -4,7 +4,6 @@
 module.exports = InnoSetupCore =
   subscriptions: null
   which: null
-  prefix: null
 
   activate: (state) ->
     {CompositeDisposable} = require 'atom'
@@ -67,7 +66,5 @@ module.exports = InnoSetupCore =
 
     if os.platform() is 'win32'
       @which  = "where"
-      @prefix = "/"
     else
       @which  = "which"
-      @prefix = "-"
