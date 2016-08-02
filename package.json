@@ -6,7 +6,18 @@
     "name": "Jan T. Sott",
     "url": "http://github.com/idleberg"
   },
-  "keywords": [],
+  "keywords": [
+    "inno setup",
+    "innosetup",
+    "installer"
+    "windows"
+    "build",
+    "build tool",
+    "compiler",
+    "grammar",
+    "iscc",
+    "language syntax",
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/idleberg/atom-language-inno"
