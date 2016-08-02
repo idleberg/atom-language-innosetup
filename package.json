@@ -10,13 +10,13 @@
     "inno setup",
     "innosetup",
     "installer"
-    "windows"
+    "windows",
     "build",
     "build tool",
     "compiler",
     "grammar",
     "iscc",
-    "language syntax",
+    "language syntax"
   ],
   "repository": {
     "type": "git",
