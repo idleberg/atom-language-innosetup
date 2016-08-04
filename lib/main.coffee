@@ -26,9 +26,9 @@ module.exports = InnoSetupCore =
       editor.save() if editor.isModified()
 
       @getPath (stdout) ->
-        isccBin  = atom.config.get('language-inno.pathToISCC')
+        isccBin  = atom.config.get('language-innosetup.pathToISCC')
         if !isccBin?
-          atom.notifications.addError("**language-inno**: no valid `ISCC.exe` was specified in your config", dismissable: false)
+          atom.notifications.addError("**language-innosetup**: no valid `ISCC.exe` was specified in your config", dismissable: false)
           return
 
         exec "\"ISCC\" \"#{script}\"", (error, stdout, stderr) ->
@@ -40,8 +40,8 @@ module.exports = InnoSetupCore =
     else
       # Something went wrong
       atom.beep()
-      if atom.config.get('language-inno.debug') is true
-        console.log "[language-inno] Scope: #{scope}"
+      if atom.config.get('language-innosetup.debug') is true
+        console.log "[language-innosetup] Scope: #{scope}"
 
   getPath: (callback) ->
     os = require 'os'
@@ -52,7 +52,7 @@ module.exports = InnoSetupCore =
       which  = "which"
 
     # If stored, return pathToISCC
-    pathToISCC = atom.config.get('language-inno.pathToISCC')
+    pathToISCC = atom.config.get('language-innosetup.pathToISCC')
     if pathToISCC?
       callback pathToISCC
       return
@@ -60,8 +60,8 @@ module.exports = InnoSetupCore =
     # Find ISCC
     exec "\"#{which}\" ISCC", (error, stdout, stderr) ->
       if error isnt null
-        atom.notifications.addError("**language-inno**: `ISCC.exe` is not in your PATH [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
+        atom.notifications.addError("**language-innosetup**: `ISCC.exe` is not in your PATH [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
       else
-        atom.config.set('language-inno.pathToISCC', stdout.trim())
+        atom.config.set('language-innosetup.pathToISCC', stdout.trim())
         callback stdout
       return

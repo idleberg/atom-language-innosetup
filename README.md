@@ -1,14 +1,14 @@
 # Inno Setup for Atom
 
-[![apm](https://img.shields.io/apm/l/language-inno.svg?style=flat-square)](https://atom.io/packages/language-inno)
-[![apm](https://img.shields.io/apm/v/language-inno.svg?style=flat-square)](https://atom.io/packages/language-inno)
-[![apm](https://img.shields.io/apm/dm/language-inno.svg?style=flat-square)](https://atom.io/packages/language-inno)
-[![Travis](https://img.shields.io/travis/idleberg/atom-language-inno.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-inno)
-[![David](https://img.shields.io/david/dev/idleberg/atom-language-inno.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-inno#info=devDependencies)
+[![apm](https://img.shields.io/apm/l/language-innosetup.svg?style=flat-square)](https://atom.io/packages/language-innosetup)
+[![apm](https://img.shields.io/apm/v/language-innosetup.svg?style=flat-square)](https://atom.io/packages/language-innosetup)
+[![apm](https://img.shields.io/apm/dm/language-innosetup.svg?style=flat-square)](https://atom.io/packages/language-innosetup)
+[![Travis](https://img.shields.io/travis/idleberg/atom-language-innosetup.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-innosetup)
+[![David](https://img.shields.io/david/dev/idleberg/atom-language-innosetup.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-innosetup#info=devDependencies)
 
 Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc), including grammar, snippets and a rudimentary build system
 
-![Screenshot](https://raw.githubusercontent.com/idleberg/atom-language-inno/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/idleberg/atom-language-innosetup/master/screenshot.png)
 
 *Screenshot of Inno Setup in Atom with [Hopscotch](https://atom.io/themes/hopscotch) theme*
 
@@ -16,9 +16,9 @@ Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc), inc
 
 ### apm
 
-Install `language-inno` from Atom's [Package Manager](http://flight-manual.atom.io/using-atom/sections/atom-packages/) or the command-line equivalent:
+Install `language-innosetup` from Atom's [Package Manager](http://flight-manual.atom.io/using-atom/sections/atom-packages/) or the command-line equivalent:
 
-`$ apm install language-inno`
+`$ apm install language-innosetup`
 
 ### GitHub
 
@@ -32,10 +32,10 @@ $ cd %USERPROFILE%\.atom\packages
 $ cd ~/.atom/packages/
 ```
 
-Clone repository as `language-inno`:
+Clone repository as `language-innosetup`:
 
 ```bash
-$ git clone https://github.com/idleberg/atom-language-inno language-inno
+$ git clone https://github.com/idleberg/atom-language-innosetup language-innosetup
 ```
 
 ## Usage
@@ -47,7 +47,7 @@ As of recently, this package contains a rudimentary build system to compile Inno
 **Example:**
 
 ```cson
-"language-inno":
+"language-innosetup":
   pathToISCC: "full\\path\\to\\ISCC.exe"
 ```
 
@@ -68,4 +68,4 @@ This work is licensed under the [The MIT License](LICENSE.md).
 
 ## Donate
 
-You are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/atom-language-inno) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
+You are welcome support this project using [Flattr](https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/atom-language-innosetup) or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`

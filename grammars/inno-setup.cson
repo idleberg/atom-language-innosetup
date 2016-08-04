@@ -3,7 +3,7 @@ fileTypes: [
   "isl"
 ]
 name: "Inno Setup"
-comment: "https://github.com/idleberg/atom-language-inno"
+comment: "https://github.com/idleberg/atom-language-innosetup"
 patterns: [
   {
     captures:
