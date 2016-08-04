@@ -1,5 +1,5 @@
 {
-  "name": "language-inno",
+  "name": "language-innosetup",
   "version": "2.1.6",
   "description": "Atom language support for Inno Setup, including grammar, snippets and a rudimentary build system",
   "author": {
