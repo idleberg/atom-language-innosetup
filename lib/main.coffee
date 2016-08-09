@@ -15,7 +15,8 @@ module.exports = InnoSetupCore =
     @subscriptions.add atom.commands.add 'atom-workspace', 'inno-setup:save-&-compile': => @buildScript()
 
   deactivate: ->
-    @subscriptions.dispose()
+    @subscriptions?.dispose()
+    @subscriptions = null
 
   buildScript: ->
     editor = atom.workspace.getActiveTextEditor()
