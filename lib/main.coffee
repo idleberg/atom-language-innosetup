@@ -48,7 +48,7 @@ module.exports = InnoSetupCore =
           atom.notifications.addError("**language-innosetup**: no valid `ISCC.exe` was specified in your config", dismissable: false)
           return
 
-        exec "\"ISCC\" \"#{script}\"", (error, stdout, stderr) ->
+        exec "\"#{isccBin}\" \"#{script}\"", (error, stdout, stderr) ->
           if error isnt null
             # isccBin error from stdout, not error!
             atom.notifications.addError("**#{script}**", detail: error, dismissable: true)
