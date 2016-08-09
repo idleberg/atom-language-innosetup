@@ -1,9 +1,20 @@
 # Dependencies
 {exec} = require 'child_process'
+os = require 'os'
+
+if os.platform() is 'win32'
+  which  = "where"
+else
+  which  = "which"
 
 module.exports = InnoSetupCore =
+  config:
+    pathToISCC:
+      title: "Path To ISCC"
+      description: "Specify the full path to `ISCC.exe`"
+      type: "string"
+      default: ""
   subscriptions: null
-  which: null
 
   activate: (state) ->
     {CompositeDisposable} = require 'atom'
@@ -40,23 +51,14 @@ module.exports = InnoSetupCore =
         exec "\"ISCC\" \"#{script}\"", (error, stdout, stderr) ->
           if error isnt null
             # isccBin error from stdout, not error!
-            atom.notifications.addError(script, detail: error, dismissable: true)
+            atom.notifications.addError("**#{script}**", detail: error, dismissable: true)
           else
             atom.notifications.addSuccess("Compiled successfully", detail: stdout, dismissable: false)
     else
       # Something went wrong
       atom.beep()
-      if atom.config.get('language-innosetup.debug') is true
-        console.log "[language-innosetup] Scope: #{scope}"
 
   getPath: (callback) ->
-    os = require 'os'
-
-    if os.platform() is 'win32'
-      which  = "where"
-    else
-      which  = "which"
-
     # If stored, return pathToISCC
     pathToISCC = atom.config.get('language-innosetup.pathToISCC')
     if pathToISCC?
