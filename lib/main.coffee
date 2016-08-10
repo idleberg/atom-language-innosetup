@@ -11,7 +11,7 @@ module.exports = InnoSetupCore =
   config:
     pathToISCC:
       title: "Path To ISCC"
-      description: "Specify the full path to `ISCC.exe`"
+      description: "Specify the full path to `ISCC.exe`. On first compile, the package will run `#{which} ISCC` in order to detect it."
       type: "string"
       default: ""
   subscriptions: null
@@ -44,7 +44,7 @@ module.exports = InnoSetupCore =
 
       @getPath (stdout) ->
         isccBin  = atom.config.get('language-innosetup.pathToISCC')
-        if !isccBin?
+        if not isccBin
           atom.notifications.addError("**language-innosetup**: no valid `ISCC.exe` was specified in your config", dismissable: false)
           return
 
@@ -61,7 +61,7 @@ module.exports = InnoSetupCore =
   getPath: (callback) ->
     # If stored, return pathToISCC
     pathToISCC = atom.config.get('language-innosetup.pathToISCC')
-    if pathToISCC?
+    if pathToISCC
       callback pathToISCC
       return
 
