@@ -4,7 +4,7 @@
 [![apm](https://img.shields.io/apm/v/language-innosetup.svg?style=flat-square)](https://atom.io/packages/language-innosetup)
 [![apm](https://img.shields.io/apm/dm/language-innosetup.svg?style=flat-square)](https://atom.io/packages/language-innosetup)
 [![Travis](https://img.shields.io/travis/idleberg/atom-language-innosetup.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-innosetup)
-[![David](https://img.shields.io/david/dev/idleberg/atom-language-innosetup.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-innosetup#info=devDependencies)
+[![David](https://img.shields.io/david/dev/idleberg/atom-language-innosetup.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-innosetup?type=dev)
 
 Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc), including grammar, snippets and a rudimentary build system
 
