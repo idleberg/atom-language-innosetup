@@ -33,8 +33,8 @@ module.exports = InnoSetupCore =
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
-       atom.notifications.addWarning("**language-innosetup**: No active editor", dismissable: false)
-       return
+      atom.notifications.addWarning("**language-innosetup**: No active editor", dismissable: false)
+      return
 
     script = editor.getPath()
     scope  = editor.getGrammar().scopeName
