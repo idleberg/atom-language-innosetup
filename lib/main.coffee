@@ -1,5 +1,5 @@
 # Dependencies
-{exec} = require 'child_process'
+{spawn} = require 'child_process'
 os = require 'os'
 
 if os.platform() is 'win32'
@@ -42,18 +42,27 @@ module.exports = InnoSetupCore =
     if script? and scope.startsWith 'source.inno'
       editor.save() if editor.isModified()
 
-      @getPath (stdout) ->
-        isccBin  = atom.config.get('language-innosetup.pathToISCC')
-        if not isccBin
+      @getPath (pathToISCC) ->
+        if not pathToISCC
           atom.notifications.addError("**language-innosetup**: no valid `ISCC.exe` was specified in your config", dismissable: false)
           return
 
-        exec "\"#{isccBin}\" \"#{script}\"", (error, stdout, stderr) ->
-          if error isnt null
-            # isccBin error from stdout, not error!
-            atom.notifications.addError("**#{script}**", detail: error, dismissable: true)
-          else
-            atom.notifications.addSuccess("Compiled successfully", detail: stdout, dismissable: false)
+        iscc = spawn pathToISCC, [script]
+
+        stdout = ""
+        stderr = ""
+
+        iscc.stderr.on 'data', ( data ) ->
+          stderr += data
+
+        iscc.stdout.on 'data', ( data ) ->
+          stdout += data
+
+        iscc.on 'close', ( errorCode ) ->
+          if errorCode > 0
+            return atom.notifications.addError("Compile Error", detail: stderr, dismissable: true)
+
+          return atom.notifications.addSuccess("Compiled successfully", dismissable: false)
     else
       # Something went wrong
       atom.beep()
@@ -61,15 +70,16 @@ module.exports = InnoSetupCore =
   getPath: (callback) ->
     # If stored, return pathToISCC
     pathToISCC = atom.config.get('language-innosetup.pathToISCC')
-    if pathToISCC
-      callback pathToISCC
-      return
+    if pathToISCC.length > 0
+      return callback(pathToISCC)
 
-    # Find ISCC
-    exec "\"#{which}\" ISCC", (error, stdout, stderr) ->
-      if error isnt null
+    which = spawn which, ["ISCC"]
+
+    which.stdout.on 'data', ( data ) ->
+      path = data.toString().trim()
+      atom.config.set('language-innosetup.pathToISCC', path)
+      return callback(path)
+
+    which.on 'close', ( errorCode ) ->
+      if errorCode > 0
         atom.notifications.addError("**language-innosetup**: `ISCC.exe` is not in your PATH [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
-      else
-        atom.config.set('language-innosetup.pathToISCC', stdout.trim())
-        callback stdout
-      return
