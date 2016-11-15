@@ -20,7 +20,7 @@ Install `language-innosetup` from Atom's [Package Manager](http://flight-manual.
 
 `$ apm install language-innosetup`
 
-### GitHub
+### Using Git
 
 Change to your Atom packages directory:
 
