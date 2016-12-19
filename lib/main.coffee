@@ -1,3 +1,5 @@
+meta = require '../package.json'
+
 # Dependencies
 {spawn} = require 'child_process'
 os = require 'os'
@@ -11,25 +13,35 @@ module.exports = InnoSetupCore =
   config:
     pathToISCC:
       title: "Path To ISCC"
-      description: "Specify the full path to `ISCC.exe`. On first compile, the package will run `#{which} ISCC` in order to detect it."
+      description: "Specify the full path to `ISCC.exe`"
       type: "string"
       default: ""
+      order: 0
+    showBuildNotifications:
+      title: "Show Build Notifications"
+      type: "boolean"
+      default: true
+      order: 1
   subscriptions: null
 
   activate: (state) ->
+    require('atom-package-deps').install(meta.name)
+
     {CompositeDisposable} = require 'atom'
 
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
 
     # Register commands
-    @subscriptions.add atom.commands.add 'atom-workspace', 'inno-setup:save-&-compile': => @buildScript()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'inno-setup:save-&-compile': => @buildScript(@consolePanel)
 
   deactivate: ->
     @subscriptions?.dispose()
     @subscriptions = null
 
-  buildScript: ->
+  consumeConsolePanel: (@consolePanel) ->
+
+  buildScript: (consolePanel) ->
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
@@ -42,44 +54,25 @@ module.exports = InnoSetupCore =
     if script? and scope.startsWith 'source.inno'
       editor.save() if editor.isModified()
 
-      @getPath (pathToISCC) ->
-        if not pathToISCC
-          atom.notifications.addError("**language-innosetup**: no valid `ISCC.exe` was specified in your config", dismissable: false)
-          return
+      pathToISCC = atom.config.get('language-innosetup.pathToISCC')
+      if not pathToISCC
+        return atom.notifications.addError("**language-innosetup**: no valid `ISCC.exe` was specified in your config", dismissable: false)
 
-        iscc = spawn pathToISCC, [script]
+      consolePanel.clear()
 
-        stdout = ""
-        stderr = ""
+      iscc = spawn pathToISCC, [script]
 
-        iscc.stderr.on 'data', ( data ) ->
-          stderr += data
+      iscc.stdout.on 'data', ( data ) ->
+        consolePanel.log(data.toString())
 
-        iscc.stdout.on 'data', ( data ) ->
-          stdout += data
+      iscc.stderr.on 'data', ( data ) ->
+        consolePanel.error(data.toString())
 
-        iscc.on 'close', ( errorCode ) ->
-          if errorCode > 0
-            return atom.notifications.addError("Compile Error", detail: stderr, dismissable: true)
+      iscc.on 'close', ( errorCode ) ->
+        if errorCode > 0
+          return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get('language-innosetup.showBuildNotifications')
 
-          return atom.notifications.addSuccess("Compiled successfully", dismissable: false)
+        return atom.notifications.addSuccess("Compiled successfully", dismissable: false) if atom.config.get('language-innosetup.showBuildNotifications')
     else
       # Something went wrong
       atom.beep()
-
-  getPath: (callback) ->
-    # If stored, return pathToISCC
-    pathToISCC = atom.config.get('language-innosetup.pathToISCC')
-    if pathToISCC.length > 0
-      return callback(pathToISCC)
-
-    which = spawn which, ["ISCC"]
-
-    which.stdout.on 'data', ( data ) ->
-      path = data.toString().trim()
-      atom.config.set('language-innosetup.pathToISCC', path)
-      return callback(path)
-
-    which.on 'close', ( errorCode ) ->
-      if errorCode > 0
-        atom.notifications.addError("**language-innosetup**: `ISCC.exe` is not in your PATH [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)

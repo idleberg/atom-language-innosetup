@@ -24,17 +24,25 @@
   },
   "license": "MIT",
   "main": "./lib/main",
-  "activationCommands": {
-    "atom-workspace": [
-      "inno-setup:save-&-compile"
-    ]
-  },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "consumedServices": {
+    "console-panel": {
+      "versions": {
+        "^1.0.0": "consumeConsolePanel"
+      }
+    }
+  },
+  "package-deps": [
+    "console-panel"
+  ],
+  "dependencies": {
+    "atom-package-deps": "^4.3.1"
+  },
   "devDependencies": {
     "coffeelint-stylish": "^0.1.2",
-    "gulp": "^3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-coffeelint": "^0.6.0",
     "gulp-debug": "^3.0.0",
     "gulp-jshint": "^2.0.1",
