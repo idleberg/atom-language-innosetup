@@ -17,11 +17,18 @@ module.exports = InnoSetupCore =
       type: "string"
       default: ""
       order: 0
-    showBuildNotifications:
-      title: "Show Build Notifications"
+    alwaysShowOutput:
+      title: "Always Show Output"
+      description: "Displays compiler output in console panel. When deactivated, it will only show on errors"
       type: "boolean"
       default: true
       order: 1
+    showBuildNotifications:
+      title: "Show Build Notifications"
+      description: "Displays color-coded notifications that close automatically after 5 seconds"
+      type: "boolean"
+      default: true
+      order: 2
   subscriptions: null
 
   activate: (state) ->
@@ -63,7 +70,7 @@ module.exports = InnoSetupCore =
       iscc = spawn pathToISCC, [script]
 
       iscc.stdout.on 'data', ( data ) ->
-        consolePanel.log(data.toString())
+        consolePanel.log(data.toString()) if atom.config.get('language-innosetup.alwaysShowOutput')
 
       iscc.stderr.on 'data', ( data ) ->
         consolePanel.error(data.toString())
