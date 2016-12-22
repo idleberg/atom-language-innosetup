@@ -29,6 +29,12 @@ module.exports = InnoSetupCore =
       type: "boolean"
       default: true
       order: 2
+    clearConsole:
+      title: "Clear Console"
+      description: "When `console-panel` isn't available, build logs will be printed using `console.log()`. This setting clears the console prior to building."
+      type: "boolean"
+      default: true
+      order: 3
   subscriptions: null
 
   activate: (state) ->
@@ -65,15 +71,24 @@ module.exports = InnoSetupCore =
       if not pathToISCC
         return atom.notifications.addError("**language-innosetup**: no valid `ISCC.exe` was specified in your config", dismissable: false)
 
-      consolePanel.clear()
+      try
+        consolePanel.clear()
+      catch
+        console.clear() if atom.config.get('language-innosetup.clearConsole')
 
       iscc = spawn pathToISCC, [script]
 
       iscc.stdout.on 'data', ( data ) ->
-        consolePanel.log(data.toString()) if atom.config.get('language-innosetup.alwaysShowOutput')
+        try
+          consolePanel.log(data.toString()) if atom.config.get('language-innosetup.alwaysShowOutput')
+        catch
+          console.log(data.toString())
 
       iscc.stderr.on 'data', ( data ) ->
-        consolePanel.error(data.toString())
+        try
+          consolePanel.error(data.toString())
+        catch
+          console.error(data.toString())
 
       iscc.on 'close', ( errorCode ) ->
         if errorCode > 0
