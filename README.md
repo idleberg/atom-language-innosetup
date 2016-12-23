@@ -38,6 +38,10 @@ Clone repository as `language-innosetup`:
 $ git clone https://github.com/idleberg/atom-language-innosetup language-innosetup
 ```
 
+### Package Dependencies
+
+This package automatically installs third-party packages it depends on. You can prevent this by disabling the *Manage Dependencies* option in the package settings.
+
 ## Usage
 
 ### Building
