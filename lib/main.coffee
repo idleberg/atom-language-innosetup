@@ -51,16 +51,16 @@ module.exports = InnoSetupCore =
 
     # Register commands
     @subscriptions.add atom.commands.add 'atom-workspace', 'inno-setup:save-&-compile': => @buildScript(@consolePanel)
-    @subscriptions.add atom.commands.add 'atom-workspace', 'inno-setup:setup-package-dependencies': => @setupPackageDeps()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'inno-setup:satisfy-package-dependencies': => @satisfyDependencies()
 
     if atom.config.get('language-innosetup.manageDependencies')
-      @setupPackageDeps()
+      @satisfyDependencies()
 
   deactivate: ->
     @subscriptions?.dispose()
     @subscriptions = null
 
-  setupPackageDeps: () ->
+  satisfyDependencies: () ->
     require('atom-package-deps').install(meta.name)
 
     for k, v of meta["package-deps"]
