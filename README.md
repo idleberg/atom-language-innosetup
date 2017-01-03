@@ -6,7 +6,7 @@
 [![Travis](https://img.shields.io/travis/idleberg/atom-language-innosetup.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-language-innosetup)
 [![David](https://img.shields.io/david/dev/idleberg/atom-language-innosetup.svg?style=flat-square)](https://david-dm.org/idleberg/atom-language-innosetup?type=dev)
 
-Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc), including grammar, snippets and a rudimentary build system
+Atom language support for [Inno Setup](https://github.com/jrsoftware/issrc), including grammar, snippets and build system
 
 ![Screenshot](https://raw.githubusercontent.com/idleberg/atom-language-innosetup/master/screenshot.png)
 
@@ -46,7 +46,7 @@ This package automatically installs third-party packages it depends on. You can 
 
 ### Building
 
-As of recently, this package contains a rudimentary build system to compile Inno Setup scripts. But first, make sure `ISCC.exe` is in your [PATH environmental variable](http://superuser.com/a/284351/195953). Alternatively, you can specify its path in your Atom [configuration](http://flight-manual.atom.io/using-atom/sections/basic-customization/#_global_configuration_settings).
+As of recently, this package contains a build system to compile Inno Setup scripts. But first, make sure `ISCC.exe` is in your [PATH environmental variable](http://superuser.com/a/284351/195953). Alternatively, you can specify its path in your Atom [configuration](http://flight-manual.atom.io/using-atom/sections/basic-customization/#_global_configuration_settings).
 
 **Example:**
 
