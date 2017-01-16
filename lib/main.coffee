@@ -85,7 +85,16 @@ module.exports = InnoSetupCore =
 
       pathToISCC = atom.config.get('language-innosetup.pathToISCC')
       if not pathToISCC
-        return atom.notifications.addError("**language-innosetup**: no valid `ISCC.exe` was specified in your config", dismissable: false)
+        return atom.notifications.addError(
+          "**#{meta.name}**: No valid `ISCC.exe` was specified in your settings",
+          dismissable: true,
+          buttons: [
+            {
+              text: 'Open Settings'
+              onDidClick: -> atom.workspace.open("atom://config/packages/#{meta.name}")
+            }
+          ]
+        )
 
       try
         consolePanel.clear()
