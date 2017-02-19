@@ -1,8 +1,8 @@
 meta = require '../package.json'
 
 # Dependencies
-{spawn} = require 'child_process'
-os = require 'os'
+{ spawn } = require 'child_process'
+{ platform } = require 'os'
 
 module.exports = InnoSetupCore =
   config:
@@ -140,7 +140,7 @@ module.exports = InnoSetupCore =
         atom.notifications.addError("**language-innosetup**: `ISCC.exe` is not in your PATH [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
 
   which: ->
-    if os.platform() is 'win32'
+    if platform() is 'win32'
       return "where"
     
     return "which"
