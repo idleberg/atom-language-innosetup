@@ -4,10 +4,7 @@ meta = require '../package.json'
 {spawn} = require 'child_process'
 os = require 'os'
 
-if os.platform() is 'win32'
-  which  = "where"
-else
-  which  = "which"
+
 
 module.exports = InnoSetupCore =
   config:
@@ -83,46 +80,69 @@ module.exports = InnoSetupCore =
     if script? and scope.startsWith 'source.inno'
       editor.save() if editor.isModified()
 
-      pathToISCC = atom.config.get('language-innosetup.pathToISCC')
-      if not pathToISCC
-        notification = atom.notifications.addWarning(
-          "**#{meta.name}**: No valid `ISCC.exe` was specified in your settings",
-          dismissable: true,
-          buttons: [
-            {
-              text: 'Open Settings'
-              onDidClick: ->
-                atom.workspace.open("atom://config/packages/#{meta.name}")
-                notification.dismiss()
-            }
-          ]
-        )
-        return
+      @getPath (pathToISCC) ->
+        if not pathToISCC
+          notification = atom.notifications.addWarning(
+            "**#{meta.name}**: No valid `ISCC.exe` was specified in your settings",
+            dismissable: true,
+            buttons: [
+              {
+                text: 'Open Settings'
+                onDidClick: ->
+                  atom.workspace.open("atom://config/packages/#{meta.name}")
+                  notification.dismiss()
+              }
+            ]
+          )
+          return
 
-      try
-        consolePanel.clear()
-      catch
-        console.clear() if atom.config.get('language-innosetup.clearConsole')
-
-      iscc = spawn pathToISCC, [script]
-
-      iscc.stdout.on 'data', ( data ) ->
         try
-          consolePanel.log(data.toString()) if atom.config.get('language-innosetup.alwaysShowOutput')
+          consolePanel.clear()
         catch
-          console.log(data.toString())
+          console.clear() if atom.config.get('language-innosetup.clearConsole')
 
-      iscc.stderr.on 'data', ( data ) ->
-        try
-          consolePanel.error(data.toString())
-        catch
-          console.error(data.toString())
+        iscc = spawn pathToISCC, [script]
 
-      iscc.on 'close', ( errorCode ) ->
-        if errorCode > 0
-          return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get('language-innosetup.showBuildNotifications')
+        iscc.stdout.on 'data', ( data ) ->
+          try
+            consolePanel.log(data.toString()) if atom.config.get('language-innosetup.alwaysShowOutput')
+          catch
+            console.log(data.toString())
 
-        return atom.notifications.addSuccess("Compiled successfully", dismissable: false) if atom.config.get('language-innosetup.showBuildNotifications')
+        iscc.stderr.on 'data', ( data ) ->
+          try
+            consolePanel.error(data.toString())
+          catch
+            console.error(data.toString())
+
+        iscc.on 'close', ( errorCode ) ->
+          if errorCode > 0
+            return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get('language-innosetup.showBuildNotifications')
+
+          return atom.notifications.addSuccess("Compiled successfully", dismissable: false) if atom.config.get('language-innosetup.showBuildNotifications')
     else
       # Something went wrong
       atom.beep()
+
+  getPath: (callback) ->
+    # If stored, return pathToISCC
+    pathToISCC = atom.config.get('language-innosetup.pathToISCC')
+    if pathToISCC.length > 0
+      return callback(pathToISCC)
+
+    which = spawn @which, ["ISCC"]
+
+    which.stdout.on 'data', ( data ) ->
+      path = data.toString().trim()
+      atom.config.set('language-innosetup.pathToISCC', path)
+      return callback(path)
+
+    which.on 'close', ( errorCode ) ->
+      if errorCode > 0
+        atom.notifications.addError("**language-innosetup**: `ISCC.exe` is not in your PATH [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
+
+  which: ->
+    if os.platform() is 'win32'
+      return "where"
+    
+    return "which"
