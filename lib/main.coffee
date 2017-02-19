@@ -4,8 +4,6 @@ meta = require '../package.json'
 {spawn} = require 'child_process'
 os = require 'os'
 
-
-
 module.exports = InnoSetupCore =
   config:
     pathToISCC:
@@ -130,7 +128,7 @@ module.exports = InnoSetupCore =
     if pathToISCC.length > 0
       return callback(pathToISCC)
 
-    which = spawn @which, ["ISCC"]
+    which = spawn @which(), ["ISCC"]
 
     which.stdout.on 'data', ( data ) ->
       path = data.toString().trim()
