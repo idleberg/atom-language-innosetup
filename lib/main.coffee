@@ -30,8 +30,8 @@ module.exports = InnoSetupCore =
       type: "boolean"
       default: true
       order: 3
-    useWine:
-      title: "Use Wine"
+    buildOnWine:
+      title: "Build on Wine"
       description: "When not on Windows, `ISCC.exe` will be launched in Wine. For better error detection, you might have to tweak `WINEDEBUG`."
       type: "boolean"
       default: false
@@ -105,9 +105,9 @@ module.exports = InnoSetupCore =
         catch
           console.clear() if atom.config.get("language-innosetup.clearConsole")
 
-        if platform() isnt "win32" and atom.config.get("language-innosetup.useWine") is true
+        if platform() isnt "win32" and atom.config.get("language-innosetup.buildOnWine") is true
           iscc = spawn "wine", [pathToISCC, script]
-        else if atom.config.get("language-innosetup.useWine") is true
+        else if atom.config.get("language-innosetup.buildOnWine") is true
           iscc = spawn pathToISCC, [script]
 
         iscc.stdout.on "data", ( data ) ->
@@ -137,7 +137,7 @@ module.exports = InnoSetupCore =
     if pathToISCC.length > 0
       return callback(pathToISCC)
 
-    if platform() isnt "win32" and atom.config.get("language-innosetup.useWine") is true
+    if platform() isnt "win32" and atom.config.get("language-innosetup.buildOnWine") is true
       which = spawn "wine", ["where", "ISCC"]
     else
       which = spawn @which(), ["ISCC"]
