@@ -32,7 +32,7 @@ module.exports = InnoSetupCore =
       order: 3
     buildOnWine:
       title: "Build on Wine"
-      description: "*Experimental* – When not on Windows, `ISCC.exe` will be launched in Wine. For better error detection, you might have to tweak `WINEDEBUG`."
+      description: "*Experimental* &mdash; When not on Windows, `ISCC.exe` will be launched in Wine. For better error detection, you might have to tweak `WINEDEBUG`."
       type: "boolean"
       default: true
       order: 4
