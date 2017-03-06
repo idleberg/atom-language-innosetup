@@ -70,11 +70,11 @@ patterns: [
     name: "variable.other.inno"
   }
   {
-    begin: ":\\s*\""
+    begin: "\""
     beginCaptures:
       "0":
         name: "punctuation.definition.string.begin.inno"
-    end: "\"{1}\\s*(;|$\\n?)"
+    end: "\""
     endCaptures:
       "0":
         name: "punctuation.definition.string.end.inno"
@@ -89,12 +89,8 @@ patterns: [
         name: "variable.other.inno"
       }
       {
-        match: "\"{2}"
+        match: "\\\\."
         name: "constant.character.escape.inno"
-      }
-      {
-        match: "\"{1}"
-        name: "invalid.illegal.inno"
       }
     ]
   }
