@@ -88,9 +88,27 @@ patterns: [
         match: "%\\w+"
         name: "variable.other.inno"
       }
+    ]
+  }
+
+  {
+    begin: "'"
+    beginCaptures:
+      "0":
+        name: "punctuation.definition.string.begin.inno"
+    end: "'"
+    endCaptures:
+      "0":
+        name: "punctuation.definition.string.end.inno"
+    name: "string.quoted.back.inno"
+    patterns: [
       {
-        match: "\\\\."
-        name: "constant.character.escape.inno"
+        match: "{(app|cf32|cf64|cf|cmd|commonappdata|commondocs|computername|dao|dotnet11|dotnet2032|dotnet2064|dotnet20|dotnet4032|dotnet4064|dotnet40|fonts|groupname|group|hwnd|language|localappdata|log|pf32|pf64|pf|sd|sendto|srcexe|src|sysuserinfoname|sysuserinfoorg|syswow64|sys|tmp|uninstallexe|usercf|userinfoname|userinfoorg|userinfoserial|username|userpf|win|wizardhwnd)}"
+        name: "constant.other.inno"
+      }
+      {
+        match: "%\\w+"
+        name: "variable.other.inno"
       }
     ]
   }
