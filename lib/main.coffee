@@ -1,9 +1,5 @@
 meta = require "../package.json"
 
-# Dependencies
-{ spawn } = require "child_process"
-{ platform } = require "os"
-
 module.exports = InnoSetupCore =
   config:
     pathToISCC:
@@ -72,6 +68,9 @@ module.exports = InnoSetupCore =
   consumeConsolePanel: (@consolePanel) ->
 
   buildScript: (consolePanel) ->
+    { spawn } = require "child_process"
+    { platform } = require "os"
+
     editor = atom.workspace.getActiveTextEditor()
 
     unless editor?
@@ -132,6 +131,9 @@ module.exports = InnoSetupCore =
       atom.beep()
 
   getPath: (callback) ->
+    { spawn } = require "child_process"
+    { platform } = require "os"
+
     # If stored, return pathToISCC
     pathToISCC = atom.config.get("language-innosetup.pathToISCC")
     if pathToISCC.length > 0
@@ -152,6 +154,8 @@ module.exports = InnoSetupCore =
         atom.notifications.addError("**#{meta.name}**: `ISCC.exe` is not in your PATH [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
 
   which: ->
+    { platform } = require "os"
+
     if platform() is "win32"
       return "where"
     
