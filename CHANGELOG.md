@@ -1,3 +1,8 @@
+# v2.11.4 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v2.11.4)
+
+- fix dependency management
+- update `devDependencies`
+
 # v2.11.3 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v2.11.3)
 
 * add support for single-quoted strings
