@@ -50,8 +50,7 @@ module.exports = InnoSetupCore =
     @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:save-&-compile": => @buildScript(@consolePanel)
     @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:satisfy-package-dependencies": => @satisfyDependencies()
 
-    if atom.config.get("language-innosetup.manageDependencies") and atom.inSpecMode is false
-      @satisfyDependencies()
+    @satisfyDependencies() if atom.config.get("#{meta.name}.manageDependencies") is true
 
   deactivate: ->
     @subscriptions?.dispose()
