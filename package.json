@@ -1,6 +1,6 @@
 {
   "name": "language-innosetup",
-  "version": "2.11.3",
+  "version": "2.11.4",
   "description": "Atom language support for Inno Setup, including grammar, snippets and build system",
   "author": {
     "name": "Jan T. Sott",
