@@ -10,14 +10,14 @@ patterns: [
     beginCaptures:
       "1":
         name: "entity.name.section.inno"
-    end: "^(?=\\[(Components|CustomMessages|Dirs|Files|Icons|INI|InstallDelete|LangOptions|Languages|Messages|Registry|Run|Setup|Tasks|Types|UninstallDelete|UninstallRun)\\])$"
+    end: "^(\\[(Components|CustomMessages|Dirs|Files|Icons|INI|InstallDelete|LangOptions|Languages|Messages|Registry|Run|Setup|Tasks|Types|UninstallDelete|UninstallRun)\\])$"
     endCaptures:
       "1":
         name: "entity.name.section.inno"
     name: "source.pascal.embedded.inno"
     patterns: [
       {
-        include: "source.pascal.inno"
+        include: "source.pascal"
       }
     ]
   }
