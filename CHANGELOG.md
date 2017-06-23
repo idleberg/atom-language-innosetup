@@ -1,3 +1,9 @@
+# v2.12.0 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v2.12.0)
+
+- add `language-pascal` dependency
+- improve Regex pattern for code blocks
+- update dependencies
+
 # v2.11.4 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v2.11.4)
 
 - fix dependency management
