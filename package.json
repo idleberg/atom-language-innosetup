@@ -35,7 +35,8 @@
     }
   },
   "package-deps": [
-    "console-panel"
+    "console-panel",
+    "language-pascal"
   ],
   "dependencies": {
     "atom-package-deps": "^4.4.1"
