@@ -1,3 +1,9 @@
+# v2.13.0 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v2.13.0)
+
+- use async `TextEditor.save()` (closes #3)
+- bump minimum Atom version to v1.19
+- Travis CI: test against Node versions 6 & 8
+
 # v2.12.0 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v2.12.0)
 
 - add `language-pascal` dependency
