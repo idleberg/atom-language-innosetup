@@ -90,7 +90,7 @@ module.exports = InnoSetupCore =
                 {
                   text: "Open Settings"
                   onDidClick: ->
-                    atom.workspace.open("atom://config/packages/#{meta.name}")
+                    atom.workspace.open("atom://config/packages/#{meta.name}", {pending: true, searchAllPanes: true})
                     notification.dismiss()
                 }
               ]
@@ -156,5 +156,5 @@ module.exports = InnoSetupCore =
 
     if platform() is "win32"
       return "where"
-    
+
     return "which"
