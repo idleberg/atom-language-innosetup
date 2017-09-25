@@ -57,6 +57,7 @@ module.exports = InnoSetupCore =
     @subscriptions = null
 
   satisfyDependencies: () ->
+    require("./ga").sendEvent "main", "Satisfy Dependencies",
     require("atom-package-deps").install(meta.name)
 
     for k, v of meta["package-deps"]
@@ -69,6 +70,8 @@ module.exports = InnoSetupCore =
   buildScript: (consolePanel) ->
     { spawn } = require "child_process"
     { platform } = require "os"
+
+    require("./ga").sendEvent "main", "Save & Compile",
 
     editor = atom.workspace.getActiveTextEditor()
 
