@@ -27,6 +27,10 @@
   "engines": {
     "atom": ">=1.19.0 <2.0.0"
   },
+  "package-deps": [
+    "console-panel",
+    "language-pascal"
+  ],
   "consumedServices": {
     "console-panel": {
       "versions": {
@@ -34,12 +38,9 @@
       }
     }
   },
-  "package-deps": [
-    "console-panel",
-    "language-pascal"
-  ],
   "dependencies": {
-    "atom-package-deps": "^4.4.1"
+    "atom-package-deps": "^4.4.1",
+    "getmac": "^1.2.1"
   },
   "devDependencies": {
     "coffeelint-stylish": "^0.1.2",
