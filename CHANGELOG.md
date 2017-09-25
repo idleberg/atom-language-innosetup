@@ -1,3 +1,7 @@
+# v2.14.0 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v2.14.0)
+
+- add metrics support
+
 # v2.13.1 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v2.13.1)
 
 - pass options to `atom.workspace.open`
