@@ -51,5 +51,5 @@ module.exports = GoogleAnalytics =
     # https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters
     {
       v: 1
-      tid: "UA-53539506-12"
+      tid: "UA-53539506-14"
     }
