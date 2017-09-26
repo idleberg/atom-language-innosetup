@@ -186,7 +186,7 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-atom-package-deps@^4.4.1:
+atom-package-deps@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/atom-package-deps/-/atom-package-deps-4.6.0.tgz#bb83f0a976563b48be4eab89e7c8631c3eec848d"
   dependencies:
@@ -1472,8 +1472,8 @@ lesshint-reporter-stylish@^2.0.0:
     chalk "^2.0.0"
 
 lesshint@^4.0.0:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/lesshint/-/lesshint-4.1.2.tgz#946b058a34a6ff9cee64ee5d5527239c98fc4b8e"
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/lesshint/-/lesshint-4.1.3.tgz#7446407ac9c2546c45d171ede386fa4dbc075f59"
   dependencies:
     commander "^2.8.0"
     lodash.merge "^4.0.1"
