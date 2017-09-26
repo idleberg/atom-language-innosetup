@@ -23,6 +23,16 @@ module.exports = Util =
       if errorCode > 0
         atom.notifications.addError("**#{meta.name}**: `ISCC.exe` is not in your PATH [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
 
+  openSettings: ->
+    meta = require "../package.json"
+    require("./ga").sendEvent "util", "Open Settings"
+
+    options =
+      pending: true
+      searchAllPanes: true
+
+    atom.workspace.open("atom://config/packages/#{meta.name}", options)
+
   satisfyDependencies: (autoRun = false) ->
     meta = require "../package.json"
 

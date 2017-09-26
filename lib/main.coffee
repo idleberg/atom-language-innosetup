@@ -41,7 +41,7 @@ module.exports =
   activate: (state) ->
     { CompositeDisposable } = require "atom"
     { buildScript } = require "./iscc"
-    { satisfyDependencies } = require "./util"
+    { openSettings, satisfyDependencies } = require "./util"
     meta = require "../package.json"
 
     # Events subscribed to in atom"s system can be easily cleaned up with a CompositeDisposable
@@ -49,6 +49,7 @@ module.exports =
 
     # Register commands
     @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:save-&-compile": => buildScript(@consolePanel)
+    @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:open-package-settings": -> openSettings()
     @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:satisfy-package-dependencies": => satisfyDependencies()
 
     satisfyDependencies(true) if atom.config.get("#{meta.name}.manageDependencies") is true
