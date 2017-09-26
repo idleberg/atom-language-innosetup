@@ -1,3 +1,8 @@
+# v3.0.0 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v3.0.0)
+
+- split into modules
+- add command to open settings
+
 # v2.14.0 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v2.14.0)
 
 - add metrics support
