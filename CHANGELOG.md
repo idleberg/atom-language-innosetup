@@ -2,6 +2,7 @@
 
 - split into modules
 - add command to open settings
+- fix snippets
 - update dependencies
 
 # v2.14.0 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v2.14.0)
