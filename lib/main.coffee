@@ -1,6 +1,4 @@
-meta = require "../package.json"
-
-module.exports = InnoSetupCore =
+module.exports =
   config:
     pathToISCC:
       title: "Path To ISCC"
@@ -41,123 +39,22 @@ module.exports = InnoSetupCore =
   subscriptions: null
 
   activate: (state) ->
-    {CompositeDisposable} = require "atom"
+    { CompositeDisposable } = require "atom"
+    { buildScript } = require "./iscc"
+    { satisfyDependencies } = require "./util"
+    meta = require "../package.json"
 
     # Events subscribed to in atom"s system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
 
     # Register commands
-    @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:save-&-compile": => @buildScript(@consolePanel)
-    @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:satisfy-package-dependencies": => @satisfyDependencies()
+    @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:save-&-compile": => buildScript(@consolePanel)
+    @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:satisfy-package-dependencies": => satisfyDependencies()
 
-    @satisfyDependencies() if atom.config.get("#{meta.name}.manageDependencies") is true
+    satisfyDependencies(true) if atom.config.get("#{meta.name}.manageDependencies") is true
 
   deactivate: ->
     @subscriptions?.dispose()
     @subscriptions = null
 
-  satisfyDependencies: () ->
-    require("./ga").sendEvent "main", "Satisfy Dependencies",
-    require("atom-package-deps").install(meta.name)
-
-    for k, v of meta["package-deps"]
-      if atom.packages.isPackageDisabled(v)
-        console.log "Enabling package '#{v}'" if atom.inDevMode()
-        atom.packages.enablePackage(v)
-
   consumeConsolePanel: (@consolePanel) ->
-
-  buildScript: (consolePanel) ->
-    { spawn } = require "child_process"
-    { platform } = require "os"
-
-    require("./ga").sendEvent "main", "Save & Compile",
-
-    editor = atom.workspace.getActiveTextEditor()
-
-    unless editor?
-      atom.notifications.addWarning("**#{meta.name}**: No active editor", dismissable: false)
-      return
-
-    script = editor.getPath()
-    scope  = editor.getGrammar().scopeName
-
-    if script? and scope.startsWith "source.inno"
-      editor.save().then ->
-        @getPath (pathToISCC) ->
-          if not pathToISCC
-            notification = atom.notifications.addWarning(
-              "**#{meta.name}**: No valid `ISCC.exe` was specified in your settings",
-              dismissable: true,
-              buttons: [
-                {
-                  text: "Open Settings"
-                  onDidClick: ->
-                    atom.workspace.open("atom://config/packages/#{meta.name}", {pending: true, searchAllPanes: true})
-                    notification.dismiss()
-                }
-              ]
-            )
-            return
-
-          try
-            consolePanel.clear()
-          catch
-            console.clear() if atom.config.get("language-innosetup.clearConsole")
-
-          if platform() isnt "win32" and atom.config.get("language-innosetup.buildOnWine") is true
-            iscc = spawn "wine", [pathToISCC, script]
-          else if atom.config.get("language-innosetup.buildOnWine") is true
-            iscc = spawn pathToISCC, [script]
-
-          iscc.stdout.on "data", ( data ) ->
-            try
-              consolePanel.log(data.toString()) if atom.config.get("language-innosetup.alwaysShowOutput")
-            catch
-              console.log(data.toString())
-
-          iscc.stderr.on "data", ( data ) ->
-            try
-              consolePanel.error(data.toString())
-            catch
-              console.error(data.toString())
-
-          iscc.on "close", ( errorCode ) ->
-            if errorCode > 0
-              return atom.notifications.addError("Compile Error", dismissable: false) if atom.config.get("language-innosetup.showBuildNotifications")
-
-            return atom.notifications.addSuccess("Compiled successfully", dismissable: false) if atom.config.get("language-innosetup.showBuildNotifications")
-    else
-      # Something went wrong
-      atom.beep()
-
-  getPath: (callback) ->
-    { spawn } = require "child_process"
-    { platform } = require "os"
-
-    # If stored, return pathToISCC
-    pathToISCC = atom.config.get("language-innosetup.pathToISCC")
-    if pathToISCC.length > 0
-      return callback(pathToISCC)
-
-    if platform() isnt "win32" and atom.config.get("language-innosetup.buildOnWine") is true
-      which = spawn "wine", ["where", "ISCC"]
-    else
-      which = spawn @which(), ["ISCC"]
-
-    which.stdout.on "data", ( data ) ->
-      path = data.toString().trim()
-      atom.config.set("language-innosetup.pathToISCC", path)
-      return callback(path)
-
-    which.on "close", ( errorCode ) ->
-      if errorCode > 0
-        atom.notifications.addError("**#{meta.name}**: `ISCC.exe` is not in your PATH [environmental variable](http://superuser.com/a/284351/195953)", dismissable: true)
-
-  which: ->
-    { platform } = require "os"
-
-    if platform() is "win32"
-      return "where"
-
-    return "which"
