@@ -37,9 +37,9 @@ module.exports = Util =
     meta = require "../package.json"
 
     if autoRun is true
-          require("./ga").sendEvent "util", "Satisfy Dependencies (auto)"
-        else
-          require("./ga").sendEvent "util", "Satisfy Dependencies (manual)"
+      require("./ga").sendEvent "util", "Satisfy Dependencies (auto)"
+    else
+      require("./ga").sendEvent "util", "Satisfy Dependencies (manual)"
 
     require("atom-package-deps").install(meta.name, true)
 

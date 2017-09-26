@@ -50,7 +50,7 @@ module.exports =
     # Register commands
     @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:save-&-compile": => buildScript(@consolePanel)
     @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:open-package-settings": -> openSettings()
-    @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:satisfy-package-dependencies": => satisfyDependencies()
+    @subscriptions.add atom.commands.add "atom-workspace", "inno-setup:satisfy-package-dependencies": -> satisfyDependencies()
 
     satisfyDependencies(true) if atom.config.get("#{meta.name}.manageDependencies") is true
 
