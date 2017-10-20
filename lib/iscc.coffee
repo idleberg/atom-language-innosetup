@@ -27,6 +27,7 @@ module.exports = Iscc =
               buttons: [
                 {
                   text: "Open Settings"
+                  className: "icon icon-gear"
                   onDidClick: ->
                     atom.workspace.open("atom://config/packages/#{meta.name}", {pending: true, searchAllPanes: true})
                     notification.dismiss()
