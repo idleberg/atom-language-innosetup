@@ -1,3 +1,7 @@
+# v3.1.0 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v3.1.0)
+
+- add button icons
+
 # v3.0.0 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v3.0.0)
 
 - split into modules
