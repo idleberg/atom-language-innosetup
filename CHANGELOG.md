@@ -1,3 +1,7 @@
+# v3.1.1 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v3.1.1)
+
+- support case-insensitive syntax
+
 # v3.1.0 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v3.1.0)
 
 - add button icons
