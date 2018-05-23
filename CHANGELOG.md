@@ -1,6 +1,6 @@
 # v3.1.3 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v3.1.3)
 
-- fix anonymizerIP parameter
+- fix `anonymizerIP` parameter
 
 # v3.1.2 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v3.1.2)
 
