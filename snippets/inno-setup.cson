@@ -1,556 +1,1312 @@
-".source.inno":
+'.source.inno':
+  '32bit':
+    body: '32bit$0'
+    prefix: '32bit'
+  '64bit':
+    body: '64bit$0'
+    prefix: '64bit'
+  'AllowCancelDuringInstall=no':
+    body: 'AllowCancelDuringInstall=no$0'
+    prefix: 'AllowCancelDuringInstall=no'
+  'AllowCancelDuringInstall=yes (default)':
+    body: 'AllowCancelDuringInstall=yes$0'
+    prefix: 'AllowCancelDuringInstall=yes (default)'
+  'AllowNetworkDrive=no':
+    body: 'AllowNetworkDrive=no$0'
+    prefix: 'AllowNetworkDrive=no'
+  'AllowNetworkDrive=yes (default)':
+    body: 'AllowNetworkDrive=yes$0'
+    prefix: 'AllowNetworkDrive=yes (default)'
+  'AllowNoIcons=no (default)':
+    body: 'AllowNoIcons=no$0'
+    prefix: 'AllowNoIcons=no (default)'
+  'AllowNoIcons=yes':
+    body: 'AllowNoIcons=yes$0'
+    prefix: 'AllowNoIcons=yes'
+  'AllowRootDirectory=no (default)':
+    body: 'AllowRootDirectory=no$0'
+    prefix: 'AllowRootDirectory=no (default)'
+  'AllowRootDirectory=yes':
+    body: 'AllowRootDirectory=yes$0'
+    prefix: 'AllowRootDirectory=yes'
+  'AllowUNCPath=no':
+    body: 'AllowUNCPath=no$0'
+    prefix: 'AllowUNCPath=no'
+  'AllowUNCPath=yes (default)':
+    body: 'AllowUNCPath=yes$0'
+    prefix: 'AllowUNCPath=yes (default)'
+  'AlwaysRestart=no (default)':
+    body: 'AlwaysRestart=no$0'
+    prefix: 'AlwaysRestart=no (default)'
+  'AlwaysRestart=yes':
+    body: 'AlwaysRestart=yes$0'
+    prefix: 'AlwaysRestart=yes'
+  'AlwaysShowComponentsList=no':
+    body: 'AlwaysShowComponentsList=no$0'
+    prefix: 'AlwaysShowComponentsList=no'
+  'AlwaysShowComponentsList=yes (default)':
+    body: 'AlwaysShowComponentsList=yes$0'
+    prefix: 'AlwaysShowComponentsList=yes (default)'
+  'AlwaysShowDirOnReadyPage=no (default)':
+    body: 'AlwaysShowDirOnReadyPage=no$0'
+    prefix: 'AlwaysShowDirOnReadyPage=no (default)'
+  'AlwaysShowDirOnReadyPage=yes':
+    body: 'AlwaysShowDirOnReadyPage=yes$0'
+    prefix: 'AlwaysShowDirOnReadyPage=yes'
+  'AlwaysShowGroupOnReadyPage=no (default)':
+    body: 'AlwaysShowGroupOnReadyPage=no$0'
+    prefix: 'AlwaysShowGroupOnReadyPage=no (default)'
+  'AlwaysShowGroupOnReadyPage=yes':
+    body: 'AlwaysShowGroupOnReadyPage=yes$0'
+    prefix: 'AlwaysShowGroupOnReadyPage=yes'
+  'AlwaysUsePersonalGroup=no (default)':
+    body: 'AlwaysUsePersonalGroup=no$0'
+    prefix: 'AlwaysUsePersonalGroup=no (default)'
+  'AlwaysUsePersonalGroup=yes':
+    body: 'AlwaysUsePersonalGroup=yes$0'
+    prefix: 'AlwaysUsePersonalGroup=yes'
+  'AppendDefaultDirName=no':
+    body: 'AppendDefaultDirName=no$0'
+    prefix: 'AppendDefaultDirName=no'
+  'AppendDefaultDirName=yes (default)':
+    body: 'AppendDefaultDirName=yes$0'
+    prefix: 'AppendDefaultDirName=yes (default)'
+  'AppendDefaultGroupName=no':
+    body: 'AppendDefaultGroupName=no$0'
+    prefix: 'AppendDefaultGroupName=no'
+  'AppendDefaultGroupName=yes (default)':
+    body: 'AppendDefaultGroupName=yes$0'
+    prefix: 'AppendDefaultGroupName=yes (default)'
+  'ChangesAssociations=no (default)':
+    body: 'ChangesAssociations=no$0'
+    prefix: 'ChangesAssociations=no (default)'
+  'ChangesAssociations=yes':
+    body: 'ChangesAssociations=yes$0'
+    prefix: 'ChangesAssociations=yes'
+  'ChangesEnvironment=no (default)':
+    body: 'ChangesEnvironment=no$0'
+    prefix: 'ChangesEnvironment=no (default)'
+  'ChangesEnvironment=yes':
+    body: 'ChangesEnvironment=yes$0'
+    prefix: 'ChangesEnvironment=yes'
+  'CloseApplications=no':
+    body: 'CloseApplications=no$0'
+    prefix: 'CloseApplications=no'
+  'CloseApplications=yes (default)':
+    body: 'CloseApplications=yes$0'
+    prefix: 'CloseApplications=yes (default)'
+  'CreateAppDir=no':
+    body: 'CreateAppDir=no$0'
+    prefix: 'CreateAppDir=no'
+  'CreateAppDir=yes (default)':
+    body: 'CreateAppDir=yes$0'
+    prefix: 'CreateAppDir=yes (default)'
+  'CreateUninstallRegKey=no':
+    body: 'CreateUninstallRegKey=no$0'
+    prefix: 'CreateUninstallRegKey=no'
+  'CreateUninstallRegKey=yes (default)':
+    body: 'CreateUninstallRegKey=yes$0'
+    prefix: 'CreateUninstallRegKey=yes (default)'
+  'DirExistsWarning=auto (default)':
+    body: 'DirExistsWarning=auto$0'
+    prefix: 'DirExistsWarning=auto (default)'
+  'DirExistsWarning=no':
+    body: 'DirExistsWarning=no$0'
+    prefix: 'DirExistsWarning=no'
+  'DirExistsWarning=yes':
+    body: 'DirExistsWarning=yes$0'
+    prefix: 'DirExistsWarning=yes'
+  'DisableDirPage=auto':
+    body: 'DisableDirPage=yes$0'
+    prefix: 'DisableDirPage=auto'
+  'DisableDirPage=no (default)':
+    body: 'DisableDirPage=no$0'
+    prefix: 'DisableDirPage=no (default)'
+  'DisableFinishedPage=no (default)':
+    body: 'DisableFinishedPage=no$0'
+    prefix: 'DisableFinishedPage=no (default)'
+  'DisableFinishedPage=yes':
+    body: 'DisableFinishedPage=yes$0'
+    prefix: 'DisableFinishedPage=yes'
+  'DisableProgramGroupPage=auto':
+    body: 'DisableProgramGroupPage=auto$0'
+    prefix: 'DisableProgramGroupPage=auto'
+  'DisableProgramGroupPage=no (default)':
+    body: 'DisableProgramGroupPage=no$0'
+    prefix: 'DisableProgramGroupPage=no (default)'
+  'DisableProgramGroupPage=yes':
+    body: 'DisableProgramGroupPage=yes$0'
+    prefix: 'DisableProgramGroupPage=yes'
+  'DisableReadyMemo=no (default)':
+    body: 'DisableReadyMemo=no$0'
+    prefix: 'DisableReadyMemo=no (default)'
+  'DisableReadyMemo=yes':
+    body: 'DisableReadyMemo=yes$0'
+    prefix: 'DisableReadyMemo=yes'
+  'DisableReadyPage=no (default)':
+    body: 'DisableReadyPage=no$0'
+    prefix: 'DisableReadyPage=no (default)'
+  'DisableReadyPage=yes':
+    body: 'DisableReadyPage=yes$0'
+    prefix: 'DisableReadyPage=yes'
+  'DisableStartupPrompt=no':
+    body: 'DisableStartupPrompt=no$0'
+    prefix: 'DisableStartupPrompt=no'
+  'DisableStartupPrompt=yes (default)':
+    body: 'DisableStartupPrompt=yes$0'
+    prefix: 'DisableStartupPrompt=yes (default)'
+  'DisableWelcomePage=no':
+    body: 'DisableWelcomePage=no$0'
+    prefix: 'DisableWelcomePage=no'
+  'DisableWelcomePage=yes (default)':
+    body: 'DisableWelcomePage=yes$0'
+    prefix: 'DisableWelcomePage=yes (default)'
+  'DiskSpanning=no (default)':
+    body: 'DiskSpanning=no$0'
+    prefix: 'DiskSpanning=no (default)'
+  'DiskSpanning=yes':
+    body: 'DiskSpanning=yes$0'
+    prefix: 'DiskSpanning=yes'
+  'EnableDirDoesntExistWarning=no (default)':
+    body: 'EnableDirDoesntExistWarning=no$0'
+    prefix: 'EnableDirDoesntExistWarning=no (default)'
+  'EnableDirDoesntExistWarning=yes':
+    body: 'EnableDirDoesntExistWarning=yes$0'
+    prefix: 'EnableDirDoesntExistWarning=yes'
+  'FlatComponentsList=no':
+    body: 'FlatComponentsList=no$0'
+    prefix: 'FlatComponentsList=no'
+  'FlatComponentsList=yes (default)':
+    body: 'FlatComponentsList=yes$0'
+    prefix: 'FlatComponentsList=yes (default)'
+  'LZMAAlgorithm=0 (default)':
+    body: 'LZMAAlgorithm=0$0'
+    prefix: 'LZMAAlgorithm=0 (default)'
+  'LZMAAlgorithm=1':
+    body: 'LZMAAlgorithm=1$0'
+    prefix: 'LZMAAlgorithm=1'
+  'LZMAMatchFinder=BT':
+    body: 'LZMAMatchFinder=BT$0'
+    prefix: 'LZMAMatchFinder=BT'
+  'LZMAMatchFinder=HC':
+    body: 'LZMAMatchFinder=HC$0'
+    prefix: 'LZMAMatchFinder=HC'
+  'LZMAUseSeparateProcess=no (default)':
+    body: 'LZMAUseSeparateProcess=no$0'
+    prefix: 'LZMAUseSeparateProcess=no (default)'
+  'LZMAUseSeparateProcess=x86':
+    body: 'LZMAUseSeparateProcess=x86$0'
+    prefix: 'LZMAUseSeparateProcess=x86'
+  'LZMAUseSeparateProcess=yes':
+    body: 'LZMAUseSeparateProcess=yes$0'
+    prefix: 'LZMAUseSeparateProcess=yes'
+  'LanguageDetectionMethod=locale':
+    body: 'LanguageDetectionMethod=locale$0'
+    prefix: 'LanguageDetectionMethod=locale'
+  'LanguageDetectionMethod=none':
+    body: 'LanguageDetectionMethod=none$0'
+    prefix: 'LanguageDetectionMethod=none'
+  'LanguageDetectionMethod=uilanguage (default)':
+    body: 'LanguageDetectionMethod=uilanguage$0'
+    prefix: 'LanguageDetectionMethod=uilanguage (default)'
+  'MergeDuplicateFiles=no':
+    body: 'MergeDuplicateFiles=no$0'
+    prefix: 'MergeDuplicateFiles=no'
+  'MergeDuplicateFiles=yes (default)':
+    body: 'MergeDuplicateFiles=yes$0'
+    prefix: 'MergeDuplicateFiles=yes (default)'
+  'Output=no':
+    body: 'Output=no$0'
+    prefix: 'Output=no'
+  'Output=yes':
+    body: 'Output=yes$0'
+    prefix: 'Output=yes'
+  'PrivilegesRequired=admin (default)':
+    body: 'PrivilegesRequired=admin$0'
+    prefix: 'PrivilegesRequired=admin (default)'
+  'PrivilegesRequired=lowest':
+    body: 'PrivilegesRequired=lowest$0'
+    prefix: 'PrivilegesRequired=lowest'
+  'PrivilegesRequired=none':
+    body: 'PrivilegesRequired=none$0'
+    prefix: 'PrivilegesRequired=none'
+  'PrivilegesRequired=poweruser':
+    body: 'PrivilegesRequired=poweruser$0'
+    prefix: 'PrivilegesRequired=poweruser'
+  'RestartApplications=no':
+    body: 'RestartApplications=no$0'
+    prefix: 'RestartApplications=no'
+  'RestartApplications=yes (default)':
+    body: 'RestartApplications=yes$0'
+    prefix: 'RestartApplications=yes (default)'
+  'RestartIfNeededByRun=no':
+    body: 'RestartIfNeededByRun=no$0'
+    prefix: 'RestartIfNeededByRun=no'
+  'RestartIfNeededByRun=yes (default)':
+    body: 'RestartIfNeededByRun=yes$0'
+    prefix: 'RestartIfNeededByRun=yes (default)'
+  'SetupLogging=no (default)':
+    body: 'SetupLogging=no$0'
+    prefix: 'SetupLogging=no (default)'
+  'SetupLogging=yes':
+    body: 'SetupLogging=yes$0'
+    prefix: 'SetupLogging=yes'
+  'ShowComponentSizes=no':
+    body: 'ShowComponentSizes=no$0'
+    prefix: 'ShowComponentSizes=no'
+  'ShowComponentSizes=yes (default)':
+    body: 'ShowComponentSizes=yes$0'
+    prefix: 'ShowComponentSizes=yes (default)'
+  'ShowLanguageDialog=auto':
+    body: 'ShowLanguageDialog=auto$0'
+    prefix: 'ShowLanguageDialog=auto'
+  'ShowLanguageDialog=no':
+    body: 'ShowLanguageDialog=no$0'
+    prefix: 'ShowLanguageDialog=no'
+  'ShowLanguageDialog=yes (default)':
+    body: 'ShowLanguageDialog=yes$0'
+    prefix: 'ShowLanguageDialog=yes (default)'
+  'ShowUndisplayableLanguages=no (default)':
+    body: 'ShowUndisplayableLanguages=no$0'
+    prefix: 'ShowUndisplayableLanguages=no (default)'
+  'ShowUndisplayableLanguages=yes':
+    body: 'ShowUndisplayableLanguages=yes$0'
+    prefix: 'ShowUndisplayableLanguages=yes'
+  'SignedUninstaller=no':
+    body: 'SignedUninstaller=no$0'
+    prefix: 'SignedUninstaller=no'
+  'SignedUninstaller=yes (default)':
+    body: 'SignedUninstaller=yes$0'
+    prefix: 'SignedUninstaller=yes (default)'
+  'SolidCompression=no (default)':
+    body: 'SolidCompression=no$0'
+    prefix: 'SolidCompression=no (default)'
+  'SolidCompression=yes':
+    body: 'SolidCompression=yes$0'
+    prefix: 'SolidCompression=yes'
+  'TerminalServicesAware=no':
+    body: 'TerminalServicesAware=no$0'
+    prefix: 'TerminalServicesAware=no'
+  'TerminalServicesAware=yes (default)':
+    body: 'TerminalServicesAware=yes$0'
+    prefix: 'TerminalServicesAware=yes (default)'
+  'TimeStampsInUTC=no (default)':
+    body: 'TimeStampsInUTC=no$0'
+    prefix: 'TimeStampsInUTC=no (default)'
+  'TimeStampsInUTC=yes':
+    body: 'TimeStampsInUTC=yes$0'
+    prefix: 'TimeStampsInUTC=yes'
+  'UninstallLogMode=append (default)':
+    body: 'UninstallLogMode=append$0'
+    prefix: 'UninstallLogMode=append (default)'
+  'UninstallLogMode=new':
+    body: 'UninstallLogMode=new$0'
+    prefix: 'UninstallLogMode=new'
+  'UninstallLogMode=overwrite':
+    body: 'UninstallLogMode=overwrite$0'
+    prefix: 'UninstallLogMode=overwrite'
+  'UninstallRestartComputer=no (default)':
+    body: 'UninstallRestartComputer=no$0'
+    prefix: 'UninstallRestartComputer=no (default)'
+  'UninstallRestartComputer=yes':
+    body: 'UninstallRestartComputer=yes$0'
+    prefix: 'UninstallRestartComputer=yes'
+  'UpdateUninstallLogAppName=no':
+    body: 'UpdateUninstallLogAppName=no$0'
+    prefix: 'UpdateUninstallLogAppName=no'
+  'UpdateUninstallLogAppName=yes (default)':
+    body: 'UpdateUninstallLogAppName=yes$0'
+    prefix: 'UpdateUninstallLogAppName=yes (default)'
+  'UsePreviousAppDir=no':
+    body: 'UsePreviousAppDir=no$0'
+    prefix: 'UsePreviousAppDir=no'
+  'UsePreviousAppDir=yes (default)':
+    body: 'UsePreviousAppDir=yes$0'
+    prefix: 'UsePreviousAppDir=yes (default)'
+  'UsePreviousGroup=no':
+    body: 'UsePreviousGroup=no$0'
+    prefix: 'UsePreviousGroup=no'
+  'UsePreviousGroup=yes (default)':
+    body: 'UsePreviousGroup=yes$0'
+    prefix: 'UsePreviousGroup=yes (default)'
+  'UsePreviousLanguage=no':
+    body: 'UsePreviousLanguage=no$0'
+    prefix: 'UsePreviousLanguage=no'
+  'UsePreviousLanguage=yes (default)':
+    body: 'UsePreviousLanguage=yes$0'
+    prefix: 'UsePreviousLanguage=yes (default)'
+  'UsePreviousSetupType=no':
+    body: 'UsePreviousSetupType=no$0'
+    prefix: 'UsePreviousSetupType=no'
+  'UsePreviousSetupType=yes (default)':
+    body: 'UsePreviousSetupType=yes$0'
+    prefix: 'UsePreviousSetupType=yes (default)'
+  'UsePreviousTasks=no':
+    body: 'UsePreviousTasks=no$0'
+    prefix: 'UsePreviousTasks=no'
+  'UsePreviousTasks=yes (default)':
+    body: 'UsePreviousTasks=yes$0'
+    prefix: 'UsePreviousTasks=yes (default)'
+  'UsePreviousUserInfo=no':
+    body: 'UsePreviousUserInfo=no$0'
+    prefix: 'UsePreviousUserInfo=no'
+  'UsePreviousUserInfo=yes (default)':
+    body: 'UsePreviousUserInfo=yes$0'
+    prefix: 'UsePreviousUserInfo=yes (default)'
+  'UseSetupLdr=no':
+    body: 'UseSetupLdr=no$0'
+    prefix: 'UseSetupLdr=no'
+  'UseSetupLdr=yes (default)':
+    body: 'UseSetupLdr=yes$0'
+    prefix: 'UseSetupLdr=yes (default)'
+  'UserInfoPage=no (default)':
+    body: 'UserInfoPage=no$0'
+    prefix: 'UserInfoPage=no (default)'
+  'UserInfoPage=yes':
+    body: 'UserInfoPage=yes$0'
+    prefix: 'UserInfoPage=yes'
+  'WindowResizable=no':
+    body: 'WindowResizable=no$0'
+    prefix: 'WindowResizable=no'
+  'WindowResizable=yes (default)':
+    body: 'WindowResizable=yes$0'
+    prefix: 'WindowResizable=yes (default)'
+  'WindowShowCaption=no':
+    body: 'WindowShowCaption=no$0'
+    prefix: 'WindowShowCaption=no'
+  'WindowShowCaption=yes (default)':
+    body: 'WindowShowCaption=yes$0'
+    prefix: 'WindowShowCaption=yes (default)'
+  'WindowStartMaximized=no':
+    body: 'WindowStartMaximized=no$0'
+    prefix: 'WindowStartMaximized=no'
+  'WindowStartMaximized=yes (default)':
+    body: 'WindowStartMaximized=yes$0'
+    prefix: 'WindowStartMaximized=yes (default)'
+  'WindowVisible=no (default)':
+    body: 'WindowVisible=no$0'
+    prefix: 'WindowVisible=no (default)'
+  'WindowVisible=yes':
+    body: 'WindowVisible=yes$0'
+    prefix: 'WindowVisible=yes'
+  'WizardImageStretch=no':
+    body: 'WizardImageStretch=no$0'
+    prefix: 'WizardImageStretch=no'
+  'WizardImageStretch=yes (default)':
+    body: 'WizardImageStretch=yes$0'
+    prefix: 'WizardImageStretch=yes (default)'
   AfterInstall:
-    prefix: "AfterInstall"
-    body: "AfterInstall"
+    body: 'AfterInstall: ${1}$0'
+    prefix: 'AfterInstall'
   AfterMyProgInstall:
-    prefix: "AfterMyProgInstall"
-    body: "AfterMyProgInstall"
+    body: 'AfterMyProgInstall: ${1}$0'
+    prefix: 'AfterMyProgInstall'
   AllowCancelDuringInstall:
-    prefix: "AllowCancelDuringInstall"
-    body: "AllowCancelDuringInstall"
+    body: 'AllowCancelDuringInstall=${1:yes|no}$0'
+    prefix: 'AllowCancelDuringInstall'
   AllowNetworkDrive:
-    prefix: "AllowNetworkDrive"
-    body: "AllowNetworkDrive"
+    body: 'AllowNetworkDrive=${1:yes|no}$0'
+    prefix: 'AllowNetworkDrive'
   AllowNoIcons:
-    prefix: "AllowNoIcons"
-    body: "AllowNoIcons"
+    body: 'AllowNoIcons=${1:no|yes}$0'
+    prefix: 'AllowNoIcons'
   AllowRootDirectory:
-    prefix: "AllowRootDirectory"
-    body: "AllowRootDirectory"
+    body: 'AllowRootDirectory=${1:no|yes}$0'
+    prefix: 'AllowRootDirectory'
   AllowUNCPath:
-    prefix: "AllowUNCPath"
-    body: "AllowUNCPath"
-  AlwaysCreateUninstallIcon:
-    prefix: "AlwaysCreateUninstallIcon"
-    body: "AlwaysCreateUninstallIcon"
+    body: 'AllowUNCPath=${1:yes|no}$0'
+    prefix: 'AllowUNCPath'
   AlwaysRestart:
-    prefix: "AlwaysRestart"
-    body: "AlwaysRestart"
+    body: 'AlwaysRestart=${1:no|yes}$0'
+    prefix: 'AlwaysRestart'
   AlwaysShowComponentsList:
-    prefix: "AlwaysShowComponentsList"
-    body: "AlwaysShowComponentsList"
+    body: 'AlwaysShowComponentsList=${1:yes|no}$0'
+    prefix: 'AlwaysShowComponentsList'
   AlwaysShowDirOnReadyPage:
-    prefix: "AlwaysShowDirOnReadyPage"
-    body: "AlwaysShowDirOnReadyPage"
+    body: 'AlwaysShowDirOnReadyPage=${1:no|yes}$0'
+    prefix: 'AlwaysShowDirOnReadyPage'
   AlwaysShowGroupOnReadyPage:
-    prefix: "AlwaysShowGroupOnReadyPage"
-    body: "AlwaysShowGroupOnReadyPage"
+    body: 'AlwaysShowGroupOnReadyPage=${1:no|yes}$0'
+    prefix: 'AlwaysShowGroupOnReadyPage'
   AlwaysUsePersonalGroup:
-    prefix: "AlwaysUsePersonalGroup"
-    body: "AlwaysUsePersonalGroup"
+    body: 'AlwaysUsePersonalGroup=${1:no|yes}$0'
+    prefix: 'AlwaysUsePersonalGroup'
   AppComments:
-    prefix: "AppComments"
-    body: "AppComments"
+    body: 'AppComments=${1}$0'
+    prefix: 'AppComments'
   AppContact:
-    prefix: "AppContact"
-    body: "AppContact"
+    body: 'AppContact=${1}$0'
+    prefix: 'AppContact'
   AppCopyright:
-    prefix: "AppCopyright"
-    body: "AppCopyright"
-  AppendDefaultDirName:
-    prefix: "AppendDefaultDirName"
-    body: "AppendDefaultDirName"
-  AppendDefaultGroupName:
-    prefix: "AppendDefaultGroupName"
-    body: "AppendDefaultGroupName"
+    body: 'AppCopyright=${1}$0'
+    prefix: 'AppCopyright'
   AppId:
-    prefix: "AppId"
-    body: "AppId"
+    body: 'AppId=${1}$0'
+    prefix: 'AppId'
   AppModifyPath:
-    prefix: "AppModifyPath"
-    body: "AppModifyPath"
+    body: 'AppModifyPath=${1}$0'
+    prefix: 'AppModifyPath'
   AppMutex:
-    prefix: "AppMutex"
-    body: "AppMutex"
+    body: 'AppMutex=${1}$0'
+    prefix: 'AppMutex'
   AppName:
-    prefix: "AppName"
-    body: "AppName"
+    body: 'AppName=${1}$0'
+    prefix: 'AppName'
   AppPublisher:
-    prefix: "AppPublisher"
-    body: "AppPublisher"
+    body: 'AppPublisher=${1}$0'
+    prefix: 'AppPublisher'
   AppPublisherURL:
-    prefix: "AppPublisherURL"
-    body: "AppPublisherURL"
+    body: 'AppPublisherURL=${1}$0'
+    prefix: 'AppPublisherURL'
   AppReadmeFile:
-    prefix: "AppReadmeFile"
-    body: "AppReadmeFile"
+    body: 'AppReadmeFile=${1}$0'
+    prefix: 'AppReadmeFile'
   AppSupportPhone:
-    prefix: "AppSupportPhone"
-    body: "AppSupportPhone"
+    body: 'AppSupportPhone=${1}$0'
+    prefix: 'AppSupportPhone'
   AppSupportURL:
-    prefix: "AppSupportURL"
-    body: "AppSupportURL"
+    body: 'AppSupportURL=${1}$0'
+    prefix: 'AppSupportURL'
   AppUpdatesURL:
-    prefix: "AppUpdatesURL"
-    body: "AppUpdatesURL"
+    body: 'AppUpdatesURL=${1}$0'
+    prefix: 'AppUpdatesURL'
   AppVerName:
-    prefix: "AppVerName"
-    body: "AppVerName"
+    body: 'AppVerName=${1}$0'
+    prefix: 'AppVerName'
   AppVersion:
-    prefix: "AppVersion"
-    body: "AppVersion"
+    body: 'AppVersion=${1}$0'
+    prefix: 'AppVersion'
+  AppendDefaultDirName:
+    body: 'AppendDefaultDirName=${1:yes|no}$0'
+    prefix: 'AppendDefaultDirName'
+  AppendDefaultGroupName:
+    body: 'AppendDefaultGroupName=${1:yes|no}$0'
+    prefix: 'AppendDefaultGroupName'
   ArchitecturesAllowed:
-    prefix: "ArchitecturesAllowed"
-    body: "ArchitecturesAllowed"
+    body: 'ArchitecturesAllowed=${1:${2:x86}${3: x64}${4: ia64}}$0'
+    prefix: 'ArchitecturesAllowed'
   ArchitecturesInstallIn64BitMode:
-    prefix: "ArchitecturesInstallIn64BitMode"
-    body: "ArchitecturesInstallIn64BitMode"
+    body: 'ArchitecturesInstallIn64BitMode=${1:${2:x86}${3: x64}${4: ia64}}$0'
+    prefix: 'ArchitecturesInstallIn64BitMode'
   BackColor:
-    prefix: "BackColor"
-    body: "BackColor"
+    body: 'BackColor=${1:\\$${2:BB}${3:GG}${4:RR}}$0'
+    prefix: 'BackColor'
   BackColor2:
-    prefix: "BackColor2"
-    body: "BackColor2"
+    body: 'BackColor2=${1:\\$${2:BB}${3:GG}${4:RR}}$0'
+    prefix: 'BackColor2'
   BackColorDirection:
-    prefix: "BackColorDirection"
-    body: "BackColorDirection"
+    body: 'BackColorDirection=${1:toptobottom|lefttoright}$0'
+    prefix: 'BackColorDirection'
   BackSolid:
-    prefix: "BackSolid"
-    body: "BackSolid"
+    body: 'BackSolid=${1:no|yes}$0'
+    prefix: 'BackSolid'
   BeforeInstall:
-    prefix: "BeforeInstall"
-    body: "BeforeInstall"
+    body: 'BeforeInstall: ${1}$0'
+    prefix: 'BeforeInstall'
   BeforeMyProgInstall:
-    prefix: "BeforeMyProgInstall"
-    body: "BeforeMyProgInstall"
-  BeveledLabel:
-    prefix: "BeveledLabel"
-    body: "BeveledLabel"
+    body: 'BeforeMyProgInstall: ${1}$0'
+    prefix: 'BeforeMyProgInstall'
   ChangesAssociations:
-    prefix: "ChangesAssociations"
-    body: "ChangesAssociations"
+    body: 'ChangesAssociations=${1:no|yes}$0'
+    prefix: 'ChangesAssociations'
   ChangesEnvironment:
-    prefix: "ChangesEnvironment"
-    body: "ChangesEnvironment"
+    body: 'ChangesEnvironment=${1:no|yes}$0'
+    prefix: 'ChangesEnvironment'
   Check:
-    prefix: "Check"
-    body: "Check"
+    body: 'Check: ${1}$0'
+    prefix: 'Check'
   CloseApplications:
-    prefix: "CloseApplications"
-    body: "CloseApplications"
+    body: 'CloseApplications=${1:yes|no}$0'
+    prefix: 'CloseApplications'
   CloseApplicationsFilter:
-    prefix: "CloseApplicationsFilter"
-    body: "CloseApplicationsFilter"
+    body: 'CloseApplicationsFilter=${1:${2:*.exe}${3:,*.dll}${4:,*.chm}}$0'
+    prefix: 'CloseApplicationsFilter'
   Components:
-    prefix: "Components"
-    body: "Components"
+    body: 'Components: ${1}$0'
+    prefix: 'Components'
   Compression:
-    prefix: "Compression"
-    body: "Compression"
+    body: 'Compression=${1:lzma2/max}$0'
+    prefix: 'Compression'
   CompressionThreads:
-    prefix: "CompressionThreads"
-    body: "CompressionThreads"
-  CopyrightFontName:
-    prefix: "CopyrightFontName"
-    body: "CopyrightFontName"
-  CopyrightFontSize:
-    prefix: "CopyrightFontSize"
-    body: "CopyrightFontSize"
+    body: 'CompressionThreads=${1:auto}$0'
+    prefix: 'CompressionThreads'
   CreateAppDir:
-    prefix: "CreateAppDir"
-    body: "CreateAppDir"
+    body: 'CreateAppDir=${1:yes|no}$0'
+    prefix: 'CreateAppDir'
   CreateUninstallRegKey:
-    prefix: "CreateUninstallRegKey"
-    body: "CreateUninstallRegKey"
+    body: 'CreateUninstallRegKey=${1:yes|no}$0'
+    prefix: 'CreateUninstallRegKey'
   DefaultDialogFontName:
-    prefix: "DefaultDialogFontName"
-    body: "DefaultDialogFontName"
+    body: 'DefaultDialogFontName=${1:Tahoma}$0'
+    prefix: 'DefaultDialogFontName'
   DefaultDirName:
-    prefix: "DefaultDirName"
-    body: "DefaultDirName"
+    body: 'DefaultDirName=${1}$0'
+    prefix: 'DefaultDirName'
   DefaultGroupName:
-    prefix: "DefaultGroupName"
-    body: "DefaultGroupName"
+    body: 'DefaultGroupName=${1}$0'
+    prefix: 'DefaultGroupName'
   DefaultUserInfoName:
-    prefix: "DefaultUserInfoName"
-    body: "DefaultUserInfoName"
+    body: 'DefaultUserInfoName=${1:{sysuserinfoname}}$0'
+    prefix: 'DefaultUserInfoName'
   DefaultUserInfoOrg:
-    prefix: "DefaultUserInfoOrg"
-    body: "DefaultUserInfoOrg"
+    body: 'DefaultUserInfoOrg=${1:{sysuserinfoorg}}$0'
+    prefix: 'DefaultUserInfoOrg'
   DefaultUserInfoSerial:
-    prefix: "DefaultUserInfoSerial"
-    body: "DefaultUserInfoSerial"
+    body: 'DefaultUserInfoSerial=${1}$0'
+    prefix: 'DefaultUserInfoSerial'
   Description:
-    prefix: "Description"
-    body: "Description"
+    body: 'Description: ${1}$0'
+    prefix: 'Description'
   DestDir:
-    prefix: "DestDir"
-    body: "DestDir"
+    body: 'DestDir: ${1}$0'
+    prefix: 'DestDir'
   DestName:
-    prefix: "DestName"
-    body: "DestName"
-  DialogFontName:
-    prefix: "DialogFontName"
-    body: "DialogFontName"
-  DialogFontSize:
-    prefix: "DialogFontSize"
-    body: "DialogFontSize"
+    body: 'DestName: ${1}$0'
+    prefix: 'DestName'
   DirExistsWarning:
-    prefix: "DirExistsWarning"
-    body: "DirExistsWarning"
-  DisableAppendDir:
-    prefix: "DisableAppendDir"
-    body: "DisableAppendDir"
+    body: 'DirExistsWarning=${1:auto|yes|no}$0'
+    prefix: 'DirExistsWarning'
   DisableDirPage:
-    prefix: "DisableDirPage"
-    body: "DisableDirPage"
+    body: 'DisableDirPage=${1:no|auto|yes}$0'
+    prefix: 'DisableDirPage'
   DisableFinishedPage:
-    prefix: "DisableFinishedPage"
-    body: "DisableFinishedPage"
+    body: 'DisableFinishedPage=${1:no|yes}$0'
+    prefix: 'DisableFinishedPage'
   DisableProgramGroupPage:
-    prefix: "DisableProgramGroupPage"
-    body: "DisableProgramGroupPage"
+    body: 'DisableProgramGroupPage=${1:no|auto|yes}$0'
+    prefix: 'DisableProgramGroupPage'
   DisableReadyMemo:
-    prefix: "DisableReadyMemo"
-    body: "DisableReadyMemo"
+    body: 'DisableReadyMemo=${1:no|yes}$0'
+    prefix: 'DisableReadyMemo'
   DisableReadyPage:
-    prefix: "DisableReadyPage"
-    body: "DisableReadyPage"
+    body: 'DisableReadyPage=${1:no|yes}$0'
+    prefix: 'DisableReadyPage'
   DisableStartupPrompt:
-    prefix: "DisableStartupPrompt"
-    body: "DisableStartupPrompt"
+    body: 'DisableStartupPrompt=${1:yes|no}$0'
+    prefix: 'DisableStartupPrompt'
   DisableWelcomePage:
-    prefix: "DisableWelcomePage"
-    body: "DisableWelcomePage"
+    body: 'DisableWelcomePage=${1:yes|no}$0'
+    prefix: 'DisableWelcomePage'
   DiskClusterSize:
-    prefix: "DiskClusterSize"
-    body: "DiskClusterSize"
+    body: 'DiskClusterSize=${1:512}$0'
+    prefix: 'DiskClusterSize'
   DiskSliceSize:
-    prefix: "DiskSliceSize"
-    body: "DiskSliceSize"
+    body: 'DiskSliceSize=${1:max}$0'
+    prefix: 'DiskSliceSize'
   DiskSpanning:
-    prefix: "DiskSpanning"
-    body: "DiskSpanning"
-  DontMergeDuplicateFiles:
-    prefix: "DontMergeDuplicateFiles"
-    body: "DontMergeDuplicateFiles"
+    body: 'DiskSpanning=${1:no|yes}$0'
+    prefix: 'DiskSpanning'
   EnableDirDoesntExistWarning:
-    prefix: "EnableDirDoesntExistWarning"
-    body: "EnableDirDoesntExistWarning"
+    body: 'EnableDirDoesntExistWarning=${1:no|yes}$0'
+    prefix: 'EnableDirDoesntExistWarning'
   Encryption:
-    prefix: "Encryption"
-    body: "Encryption"
+    body: 'Encryption=${1:no|yes}$0'
+    prefix: 'Encryption'
   ExtraDiskSpaceRequired:
-    prefix: "ExtraDiskSpaceRequired"
-    body: "ExtraDiskSpaceRequired"
+    body: 'ExtraDiskSpaceRequired=${1:0}$0'
+    prefix: 'ExtraDiskSpaceRequired'
   Filename:
-    prefix: "Filename"
-    body: "Filename"
+    body: 'Filename: ${1}$0'
+    prefix: 'Filename'
   Flags:
-    prefix: "Flags"
-    body: "Flags"
+    body: 'Flags: ${1}$0'
+    prefix: 'Flags'
   FlatComponentsList:
-    prefix: "FlatComponentsList"
-    body: "FlatComponentsList"
+    body: 'FlatComponentsList=${1:yes|no}$0'
+    prefix: 'FlatComponentsList'
   InfoAfterFile:
-    prefix: "InfoAfterFile"
-    body: "InfoAfterFile"
+    body: 'InfoAfterFile=${1}$0'
+    prefix: 'InfoAfterFile'
   InfoBeforeFile:
-    prefix: "InfoBeforeFile"
-    body: "InfoBeforeFile"
+    body: 'InfoBeforeFile=${1}$0'
+    prefix: 'InfoBeforeFile'
   InternalCompressLevel:
-    prefix: "InternalCompressLevel"
-    body: "InternalCompressLevel"
-  LanguageCodePage:
-    prefix: "LanguageCodePage"
-    body: "LanguageCodePage"
-  LanguageDetectionMethod:
-    prefix: "LanguageDetectionMethod"
-    body: "LanguageDetectionMethod"
-  LanguageID:
-    prefix: "LanguageID"
-    body: "LanguageID"
-  LanguageName:
-    prefix: "LanguageName"
-    body: "LanguageName"
-  Languages:
-    prefix: "Languages"
-    body: "Languages"
-  LicenseFile:
-    prefix: "LicenseFile"
-    body: "LicenseFile"
+    body: 'InternalCompressLevel=${1:normal}$0'
+    prefix: 'InternalCompressLevel'
   LZMAAlgorithm:
-    prefix: "LZMAAlgorithm"
-    body: "LZMAAlgorithm"
+    body: 'LZMAAlgorithm=${1:0|1}$0'
+    prefix: 'LZMAAlgorithm'
   LZMABlockSize:
-    prefix: "LZMABlockSize"
-    body: "LZMABlockSize"
+    body: 'LZMABlockSize=${1:}$0'
+    prefix: 'LZMABlockSize'
   LZMADictionarySize:
-    prefix: "LZMADictionarySize"
-    body: "LZMADictionarySize"
+    body: 'LZMADictionarySize=${1}$0'
+    prefix: 'LZMADictionarySize'
   LZMAMatchFinder:
-    prefix: "LZMAMatchFinder"
-    body: "LZMAMatchFinder"
+    body: 'LZMAMatchFinder=${1:HC|BT}$0'
+    prefix: 'LZMAMatchFinder'
   LZMANumBlockThreads:
-    prefix: "LZMANumBlockThreads"
-    body: "LZMANumBlockThreads"
+    body: 'LZMANumBlockThreads=${1:1}$0'
+    prefix: 'LZMANumBlockThreads'
   LZMANumFastBytes:
-    prefix: "LZMANumFastBytes"
-    body: "LZMANumFastBytes"
+    body: 'LZMANumFastBytes=${1}$0'
+    prefix: 'LZMANumFastBytes'
   LZMAUseSeparateProcess:
-    prefix: "LZMAUseSeparateProcess"
-    body: "LZMAUseSeparateProcess"
+    body: 'LZMAUseSeparateProcess=${1:no|yes|x86}$0'
+    prefix: 'LZMAUseSeparateProcess'
+  LanguageDetectionMethod:
+    body: 'LanguageDetectionMethod=${1:uilanguage|locale|none}$0'
+    prefix: 'LanguageDetectionMethod'
+  Languages:
+    body: 'Languages: ${1}$0'
+    prefix: 'Languages'
+  LicenseFile:
+    body: 'LicenseFile=${1}$0'
+    prefix: 'LicenseFile'
   MergeDuplicateFiles:
-    prefix: "MergeDuplicateFiles"
-    body: "MergeDuplicateFiles"
-  MessagesFile:
-    prefix: "MessagesFile"
-    body: "MessagesFile"
+    body: 'MergeDuplicateFiles=${1:yes|no}$0'
+    prefix: 'MergeDuplicateFiles'
   MinVersion:
-    prefix: "MinVersion"
-    body: "MinVersion"
-  MyAppName:
-    prefix: "MyAppName"
-    body: "MyAppName"
-  MyAppVerName:
-    prefix: "MyAppVerName"
-    body: "MyAppVerName"
-  MyDescription:
-    prefix: "MyDescription"
-    body: "MyDescription"
+    body: 'MinVersion=${1:5}.${2:0}$0'
+    prefix: 'MinVersion'
   Name:
-    prefix: "Name"
-    body: "Name"
+    body: 'Name: ${1}$0'
+    prefix: 'Name'
   OnlyBelowVersion:
-    prefix: "OnlyBelowVersion"
-    body: "OnlyBelowVersion"
+    body: 'OnlyBelowVersion=${1:0}$0'
+    prefix: 'OnlyBelowVersion'
   Output:
-    prefix: "Output"
-    body: "Output"
+    body: 'Output=${1:yes|no}$0'
+    prefix: 'Output'
   OutputBaseFilename:
-    prefix: "OutputBaseFilename"
-    body: "OutputBaseFilename"
+    body: 'OutputBaseFilename=${1:setup}$0'
+    prefix: 'OutputBaseFilename'
   OutputDir:
-    prefix: "OutputDir"
-    body: "OutputDir"
+    body: 'OutputDir=${1}$0'
+    prefix: 'OutputDir'
   OutputManifestFile:
-    prefix: "OutputManifestFile"
-    body: "OutputManifestFile"
+    body: 'OutputManifestFile=${1}$0'
+    prefix: 'OutputManifestFile'
   Parameters:
-    prefix: "Parameters"
-    body: "Parameters"
+    body: 'Parameters: ${1}$0'
+    prefix: 'Parameters'
   Password:
-    prefix: "Password"
-    body: "Password"
+    body: 'Password=${1}$0'
+    prefix: 'Password'
   PrivilegesRequired:
-    prefix: "PrivilegesRequired"
-    body: "PrivilegesRequired"
+    body: 'PrivilegesRequired=${1:admin|none|poweruser|lowest}$0'
+    prefix: 'PrivilegesRequired'
   ReserveBytes:
-    prefix: "ReserveBytes"
-    body: "ReserveBytes"
+    body: 'ReserveBytes=${1:0}$0'
+    prefix: 'ReserveBytes'
   RestartApplications:
-    prefix: "RestartApplications"
-    body: "RestartApplications"
+    body: 'RestartApplications=${1:yes|no}$0'
+    prefix: 'RestartApplications'
   RestartIfNeededByRun:
-    prefix: "RestartIfNeededByRun"
-    body: "RestartIfNeededByRun"
-  RightToLeft:
-    prefix: "RightToLeft"
-    body: "RightToLeft"
+    body: 'RestartIfNeededByRun=${1:yes|no}$0'
+    prefix: 'RestartIfNeededByRun'
   Root:
-    prefix: "Root"
-    body: "Root"
+    body: 'Root: ${1}$0'
+    prefix: 'Root'
   SetupIconFile:
-    prefix: "SetupIconFile"
-    body: "SetupIconFile"
+    body: 'SetupIconFile=${1}$0'
+    prefix: 'SetupIconFile'
   SetupLogging:
-    prefix: "SetupLogging"
-    body: "SetupLogging"
+    body: 'SetupLogging=${1:no|yes}$0'
+    prefix: 'SetupLogging'
   ShowComponentSizes:
-    prefix: "ShowComponentSizes"
-    body: "ShowComponentSizes"
+    body: 'ShowComponentSizes=${1:yes|no}$0'
+    prefix: 'ShowComponentSizes'
   ShowLanguageDialog:
-    prefix: "ShowLanguageDialog"
-    body: "ShowLanguageDialog"
+    body: 'ShowLanguageDialog=${1:yes|no|auto}$0'
+    prefix: 'ShowLanguageDialog'
   ShowTasksTreeLines:
-    prefix: "ShowTasksTreeLines"
-    body: "ShowTasksTreeLines"
+    body: 'ShowTasksTreeLines=${1:no|yes}$0'
+    prefix: 'ShowTasksTreeLines'
   ShowUndisplayableLanguages:
-    prefix: "ShowUndisplayableLanguages"
-    body: "ShowUndisplayableLanguages"
-  SignedUninstaller:
-    prefix: "SignedUninstaller"
-    body: "SignedUninstaller"
-  SignedUninstallerDir:
-    prefix: "SignedUninstallerDir"
-    body: "SignedUninstallerDir"
+    body: 'ShowUndisplayableLanguages=${1:no|yes}$0'
+    prefix: 'ShowUndisplayableLanguages'
   SignTool:
-    prefix: "SignTool"
-    body: "SignTool"
+    body: 'SignTool=${1}$0'
+    prefix: 'SignTool'
+  SignToolMinimumTimeBetween:
+    body: 'SignToolMinimumTimeBetween=${1:0}$0'
+    prefix: 'SignToolMinimumTimeBetween'
   SignToolRetryCount:
-    prefix: "SignToolRetryCount"
-    body: "SignToolRetryCount"
+    body: 'SignToolRetryCount=${1:2}$0'
+    prefix: 'SignToolRetryCount'
+  SignToolRetryDelay:
+    body: 'SignToolRetryDelay=${1:500}$0'
+    prefix: 'SignToolRetryDelay'
+  SignedUninstaller:
+    body: 'SignedUninstaller=${1:yes|no}$0'
+    prefix: 'SignedUninstaller'
+  SignedUninstallerDir:
+    body: 'SignedUninstallerDir=${1}$0'
+    prefix: 'SignedUninstallerDir'
   SlicesPerDisk:
-    prefix: "SlicesPerDisk"
-    body: "SlicesPerDisk"
+    body: 'SlicesPerDisk=${1:1}$0'
+    prefix: 'SlicesPerDisk'
   SolidCompression:
-    prefix: "SolidCompression"
-    body: "SolidCompression"
+    body: 'SolidCompression=${1:no|yes}$0'
+    prefix: 'SolidCompression'
   Source:
-    prefix: "Source"
-    body: "Source"
+    body: 'Source: ${1}$0'
+    prefix: 'Source'
   SourceDir:
-    prefix: "SourceDir"
-    body: "SourceDir"
+    body: 'SourceDir=${1}$0'
+    prefix: 'SourceDir'
   StatusMsg:
-    prefix: "StatusMsg"
-    body: "StatusMsg"
+    body: 'StatusMsg: ${1}$0'
+    prefix: 'StatusMsg'
   Subkey:
-    prefix: "Subkey"
-    body: "Subkey"
+    body: 'Subkey: ${1}$0'
+    prefix: 'Subkey'
   TerminalServicesAware:
-    prefix: "TerminalServicesAware"
-    body: "TerminalServicesAware"
+    body: 'TerminalServicesAware=${1:yes|no}$0'
+    prefix: 'TerminalServicesAware'
   TimeStampRounding:
-    prefix: "TimeStampRounding"
-    body: "TimeStampRounding"
+    body: 'TimeStampRounding=${1:2}$0'
+    prefix: 'TimeStampRounding'
   TimeStampsInUTC:
-    prefix: "TimeStampsInUTC"
-    body: "TimeStampsInUTC"
-  TitleFontName:
-    prefix: "TitleFontName"
-    body: "TitleFontName"
-  TitleFontSize:
-    prefix: "TitleFontSize"
-    body: "TitleFontSize"
+    body: 'TimeStampsInUTC=${1:no|yes}$0'
+    prefix: 'TimeStampsInUTC'
   TouchDate:
-    prefix: "TouchDate"
-    body: "TouchDate"
+    body: 'TouchDate=${1:current|none|YYYY-MM-DD}$0'
+    prefix: 'TouchDate'
   TouchTime:
-    prefix: "TouchTime"
-    body: "TouchTime"
+    body: 'TouchTime=${1:current|none|HH:MM|HH:MM:SS}$0'
+    prefix: 'TouchTime'
   Type:
-    prefix: "Type"
-    body: "Type"
+    body: 'Type: ${1}$0'
+    prefix: 'Type'
   Types:
-    prefix: "Types"
-    body: "Types"
-  Uninstallable:
-    prefix: "Uninstallable"
-    body: "Uninstallable"
+    body: 'Types: ${1}$0'
+    prefix: 'Types'
   UninstallDisplayIcon:
-    prefix: "UninstallDisplayIcon"
-    body: "UninstallDisplayIcon"
+    body: 'UninstallDisplayIcon=${1}$0'
+    prefix: 'UninstallDisplayIcon'
   UninstallDisplayName:
-    prefix: "UninstallDisplayName"
-    body: "UninstallDisplayName"
+    body: 'UninstallDisplayName=${1}$0'
+    prefix: 'UninstallDisplayName'
   UninstallDisplaySize:
-    prefix: "UninstallDisplaySize"
-    body: "UninstallDisplaySize"
+    body: 'UninstallDisplaySize=${1}$0'
+    prefix: 'UninstallDisplaySize'
   UninstallFilesDir:
-    prefix: "UninstallFilesDir"
-    body: "UninstallFilesDir"
-  UninstallIconFile:
-    prefix: "UninstallIconFile"
-    body: "UninstallIconFile"
-  UninstallIconName:
-    prefix: "UninstallIconName"
-    body: "UninstallIconName"
+    body: 'UninstallFilesDir=${1:{app}}$0'
+    prefix: 'UninstallFilesDir'
   UninstallLogMode:
-    prefix: "UninstallLogMode"
-    body: "UninstallLogMode"
+    body: 'UninstallLogMode=${1:append|new|overwrite}$0'
+    prefix: 'UninstallLogMode'
   UninstallRestartComputer:
-    prefix: "UninstallRestartComputer"
-    body: "UninstallRestartComputer"
-  UninstallStyle:
-    prefix: "UninstallStyle"
-    body: "UninstallStyle"
+    body: 'UninstallRestartComputer=${1:no|yes}$0'
+    prefix: 'UninstallRestartComputer'
+  Uninstallable:
+    body: 'Uninstallable=${1:yes|no}$0'
+    prefix: 'Uninstallable'
   UpdateUninstallLogAppName:
-    prefix: "UpdateUninstallLogAppName"
-    body: "UpdateUninstallLogAppName"
+    body: 'UpdateUninstallLogAppName=${1:yes|no}$0'
+    prefix: 'UpdateUninstallLogAppName'
   UsePreviousAppDir:
-    prefix: "UsePreviousAppDir"
-    body: "UsePreviousAppDir"
+    body: 'UsePreviousAppDir=${1:yes|no}$0'
+    prefix: 'UsePreviousAppDir'
   UsePreviousGroup:
-    prefix: "UsePreviousGroup"
-    body: "UsePreviousGroup"
+    body: 'UsePreviousGroup=${1:yes|no}$0'
+    prefix: 'UsePreviousGroup'
   UsePreviousLanguage:
-    prefix: "UsePreviousLanguage"
-    body: "UsePreviousLanguage"
+    body: 'UsePreviousLanguage=${1:yes|no}$0'
+    prefix: 'UsePreviousLanguage'
   UsePreviousSetupType:
-    prefix: "UsePreviousSetupType"
-    body: "UsePreviousSetupType"
+    body: 'UsePreviousSetupType=${1:yes|no}$0'
+    prefix: 'UsePreviousSetupType'
   UsePreviousTasks:
-    prefix: "UsePreviousTasks"
-    body: "UsePreviousTasks"
+    body: 'UsePreviousTasks=${1:yes|no}$0'
+    prefix: 'UsePreviousTasks'
   UsePreviousUserInfo:
-    prefix: "UsePreviousUserInfo"
-    body: "UsePreviousUserInfo"
-  UserInfoPage:
-    prefix: "UserInfoPage"
-    body: "UserInfoPage"
+    body: 'UsePreviousUserInfo=${1:yes|no}$0'
+    prefix: 'UsePreviousUserInfo'
   UseSetupLdr:
-    prefix: "UseSetupLdr"
-    body: "UseSetupLdr"
+    body: 'UseSetupLdr=${1:yes|no}$0'
+    prefix: 'UseSetupLdr'
+  UserInfoPage:
+    body: 'UserInfoPage=${1:no|yes}$0'
+    prefix: 'UserInfoPage'
   ValueData:
-    prefix: "ValueData"
-    body: "ValueData"
+    body: 'ValueData: ${1}$0'
+    prefix: 'ValueData'
   ValueName:
-    prefix: "ValueName"
-    body: "ValueName"
+    body: 'ValueName: ${1}$0'
+    prefix: 'ValueName'
   ValueType:
-    prefix: "ValueType"
-    body: "ValueType"
+    body: 'ValueType: ${1}$0'
+    prefix: 'ValueType'
   VersionInfoCompany:
-    prefix: "VersionInfoCompany"
-    body: "VersionInfoCompany"
+    body: 'VersionInfoCompany=${1:AppPublisher}$0'
+    prefix: 'VersionInfoCompany'
   VersionInfoCopyright:
-    prefix: "VersionInfoCopyright"
-    body: "VersionInfoCopyright"
+    body: 'VersionInfoCopyright=${1:AppCopyright}$0'
+    prefix: 'VersionInfoCopyright'
   VersionInfoDescription:
-    prefix: "VersionInfoDescription"
-    body: "VersionInfoDescription"
+    body: 'VersionInfoDescription=${1:AppName Setup}$0'
+    prefix: 'VersionInfoDescription'
+  VersionInfoOriginalFileName:
+    body: 'VersionInfoOriginalFileName=${1:FileName}$0'
+    prefix: 'VersionInfoOriginalFileName'
   VersionInfoProductName:
-    prefix: "VersionInfoProductName"
-    body: "VersionInfoProductName"
+    body: 'VersionInfoProductName=${1:AppName}$0'
+    prefix: 'VersionInfoProductName'
   VersionInfoProductTextVersion:
-    prefix: "VersionInfoProductTextVersion"
-    body: "VersionInfoProductTextVersion"
+    body: 'VersionInfoProductTextVersion=${1:VersionInfoProductVersion}$0'
+    prefix: 'VersionInfoProductTextVersion'
   VersionInfoProductVersion:
-    prefix: "VersionInfoProductVersion"
-    body: "VersionInfoProductVersion"
+    body: 'VersionInfoProductVersion=${1:VersionInfoVersion}$0'
+    prefix: 'VersionInfoProductVersion'
   VersionInfoTextVersion:
-    prefix: "VersionInfoTextVersion"
-    body: "VersionInfoTextVersion"
+    body: 'VersionInfoTextVersion=${1:VersionInfoVersion}$0'
+    prefix: 'VersionInfoTextVersion'
   VersionInfoVersion:
-    prefix: "VersionInfoVersion"
-    body: "VersionInfoVersion"
-  WelcomeFontName:
-    prefix: "WelcomeFontName"
-    body: "WelcomeFontName"
-  WelcomeFontSize:
-    prefix: "WelcomeFontSize"
-    body: "WelcomeFontSize"
+    body: 'VersionInfoVersion=${1:0}.${2:0}.${3:0}.${4:0}$0'
+    prefix: 'VersionInfoVersion'
   WindowResizable:
-    prefix: "WindowResizable"
-    body: "WindowResizable"
+    body: 'WindowResizable=${1:yes|no}$0'
+    prefix: 'WindowResizable'
   WindowShowCaption:
-    prefix: "WindowShowCaption"
-    body: "WindowShowCaption"
+    body: 'WindowShowCaption=${1:yes|no}$0'
+    prefix: 'WindowShowCaption'
   WindowStartMaximized:
-    prefix: "WindowStartMaximized"
-    body: "WindowStartMaximized"
+    body: 'WindowStartMaximized=${1:yes|no}$0'
+    prefix: 'WindowStartMaximized'
   WindowVisible:
-    prefix: "WindowVisible"
-    body: "WindowVisible"
+    body: 'WindowVisible=${1:no|yes}$0'
+    prefix: 'WindowVisible'
   WizardImageBackColor:
-    prefix: "WizardImageBackColor"
-    body: "WizardImageBackColor"
+    body: 'WizardImageBackColor=${1:\\$${2:BB}${3:GG}${4:RR}}$0'
+    prefix: 'WizardImageBackColor'
   WizardImageFile:
-    prefix: "WizardImageFile"
-    body: "WizardImageFile"
+    body: 'WizardImageFile=${1:compiler:WIZMODERNIMAGE.BMP}$0'
+    prefix: 'WizardImageFile'
   WizardImageStretch:
-    prefix: "WizardImageStretch"
-    body: "WizardImageStretch"
-  WizardSmallImageBackColor:
-    prefix: "WizardSmallImageBackColor"
-    body: "WizardSmallImageBackColor"
+    body: 'WizardImageStretch=${1:yes|no}$0'
+    prefix: 'WizardImageStretch'
   WizardSmallImageFile:
-    prefix: "WizardSmallImageFile"
-    body: "WizardSmallImageFile"
-  WizardStyle:
-    prefix: "WizardStyle"
-    body: "WizardStyle"
+    body: 'WizardSmallImageFile=${1:compiler:WIZMODERNSMALLIMAGE.BMP}$0'
+    prefix: 'WizardSmallImageFile'
   WorkingDir:
-    prefix: "WorkingDir"
-    body: "WorkingDir"
+    body: 'WorkingDir: ${1}$0'
+    prefix: 'WorkingDir'
+  admin:
+    body: 'admin$0'
+    prefix: 'admin'
+  allowunsafefiles:
+    body: 'allowunsafefiles$0'
+    prefix: 'allowunsafefiles'
+  append:
+    body: 'append$0'
+    prefix: 'append'
+  auto:
+    body: 'auto$0'
+    prefix: 'auto'
+  binary:
+    body: 'binary$0'
+    prefix: 'binary'
+  bzip:
+    body: 'bzip$0'
+    prefix: 'bzip'
+  checkablealone:
+    body: 'checkablealone$0'
+    prefix: 'checkablealone'
+  checkedonce:
+    body: 'checkedonce$0'
+    prefix: 'checkedonce'
+  clAqua:
+    body: 'clAqua$0'
+    prefix: 'clAqua'
+  clBlack:
+    body: 'clBlack$0'
+    prefix: 'clBlack'
+  clBlue:
+    body: 'clBlue$0'
+    prefix: 'clBlue'
+  clFuchsia:
+    body: 'clFuchsia$0'
+    prefix: 'clFuchsia'
+  clGray:
+    body: 'clGray$0'
+    prefix: 'clGray'
+  clGreen:
+    body: 'clGreen$0'
+    prefix: 'clGreen'
+  clLime:
+    body: 'clLime$0'
+    prefix: 'clLime'
+  clMaroon:
+    body: 'clMaroon$0'
+    prefix: 'clMaroon'
+  clNavy:
+    body: 'clNavy$0'
+    prefix: 'clNavy'
+  clOlive:
+    body: 'clOlive$0'
+    prefix: 'clOlive'
+  clPurple:
+    body: 'clPurple$0'
+    prefix: 'clPurple'
+  clRed:
+    body: 'clRed$0'
+    prefix: 'clRed'
+  clSilver:
+    body: 'clSilver$0'
+    prefix: 'clSilver'
+  clTeal:
+    body: 'clTeal$0'
+    prefix: 'clTeal'
+  clWhite:
+    body: 'clWhite$0'
+    prefix: 'clWhite'
+  clYellow:
+    body: 'clYellow$0'
+    prefix: 'clYellow'
+  closeonexit:
+    body: 'closeonexit$0'
+    prefix: 'closeonexit'
+  compact:
+    body: 'compact$0'
+    prefix: 'compact'
+  comparetimestamp:
+    body: 'comparetimestamp$0'
+    prefix: 'comparetimestamp'
+  compiler:
+    body: 'compiler$0'
+    prefix: 'compiler'
+  confirmoverwrite:
+    body: 'confirmoverwrite$0'
+    prefix: 'confirmoverwrite'
+  createallsubdirs:
+    body: 'createallsubdirs$0'
+    prefix: 'createallsubdirs'
+  createkeyifdoesntexist:
+    body: 'createkeyifdoesntexist$0'
+    prefix: 'createkeyifdoesntexist'
+  createonlyiffileexists:
+    body: 'createonlyiffileexists$0'
+    prefix: 'createonlyiffileexists'
+  createvalueifdoesntexist:
+    body: 'createvalueifdoesntexist$0'
+    prefix: 'createvalueifdoesntexist'
+  current:
+    body: 'current$0'
+    prefix: 'current'
+  custom:
+    body: 'custom$0'
+    prefix: 'custom'
+  deleteafterinstall:
+    body: 'deleteafterinstall$0'
+    prefix: 'deleteafterinstall'
+  deletekey:
+    body: 'deletekey$0'
+    prefix: 'deletekey'
+  deletevalue:
+    body: 'deletevalue$0'
+    prefix: 'deletevalue'
+  desktopicon:
+    body: 'desktopicon$0'
+    prefix: 'desktopicon'
+  dirifempty:
+    body: 'dirifempty$0'
+    prefix: 'dirifempty'
+  disablenouninstallwarning:
+    body: 'disablenouninstallwarning$0'
+    prefix: 'disablenouninstallwarning'
+  dontcloseonexit:
+    body: 'dontcloseonexit$0'
+    prefix: 'dontcloseonexit'
+  dontcopy:
+    body: 'dontcopy$0'
+    prefix: 'dontcopy'
+  dontcreatekey:
+    body: 'dontcreatekey$0'
+    prefix: 'dontcreatekey'
+  dontinheritcheck:
+    body: 'dontinheritcheck$0'
+    prefix: 'dontinheritcheck'
+  dontverifychecksum:
+    body: 'dontverifychecksum$0'
+    prefix: 'dontverifychecksum'
+  dword:
+    body: 'dword$0'
+    prefix: 'dword'
+  excludefromshowinnewinstall:
+    body: 'excludefromshowinnewinstall$0'
+    prefix: 'excludefromshowinnewinstall'
+  exclusive:
+    body: 'exclusive$0'
+    prefix: 'exclusive'
+  expandsz:
+    body: 'expandsz$0'
+    prefix: 'expandsz'
+  external:
+    body: 'external$0'
+    prefix: 'external'
+  fast:
+    body: 'fast$0'
+    prefix: 'fast'
+  files:
+    body: 'files$0'
+    prefix: 'files'
+  filesandordirs:
+    body: 'filesandordirs$0'
+    prefix: 'filesandordirs'
+  fixed:
+    body: 'fixed$0'
+    prefix: 'fixed'
+  foldershortcut:
+    body: 'foldershortcut$0'
+    prefix: 'foldershortcut'
+  fontisnttruetype:
+    body: 'fontisnttruetype$0'
+    prefix: 'fontisnttruetype'
+  full:
+    body: 'full$0'
+    prefix: 'full'
+  gacinstall:
+    body: 'gacinstall$0'
+    prefix: 'gacinstall'
+  help:
+    body: 'help$0'
+    prefix: 'help'
+  hidewizard:
+    body: 'hidewizard$0'
+    prefix: 'hidewizard'
+  ia64:
+    body: 'ia64$0'
+    prefix: 'ia64'
+  ignoreversion:
+    body: 'ignoreversion$0'
+    prefix: 'ignoreversion'
+  iscustom:
+    body: 'iscustom$0'
+    prefix: 'iscustom'
+  isreadme:
+    body: 'isreadme$0'
+    prefix: 'isreadme'
+  lefttoright:
+    body: 'lefttoright$0'
+    prefix: 'lefttoright'
+  locale:
+    body: 'locale$0'
+    prefix: 'locale'
+  lowest:
+    body: 'lowest$0'
+    prefix: 'lowest'
+  lzma:
+    body: 'lzma$0'
+    prefix: 'lzma'
+  lzma2:
+    body: 'lzma2$0'
+    prefix: 'lzma2'
+  main:
+    body: 'main$0'
+    prefix: 'main'
+  max:
+    body: 'max$0'
+    prefix: 'max'
+  modify:
+    body: 'modify$0'
+    prefix: 'modify'
+  multisz:
+    body: 'multisz$0'
+    prefix: 'multisz'
+  new:
+    body: 'new$0'
+    prefix: 'new'
+  no:
+    body: 'no$0'
+    prefix: 'no'
+  nocompression:
+    body: 'nocompression$0'
+    prefix: 'nocompression'
+  noencryption:
+    body: 'noencryption$0'
+    prefix: 'noencryption'
+  noerror:
+    body: 'noerror$0'
+    prefix: 'noerror'
+  none:
+    body: 'none$0'
+    prefix: 'none'
+  noregerror:
+    body: 'noregerror$0'
+    prefix: 'noregerror'
+  normal:
+    body: 'normal$0'
+    prefix: 'normal'
+  nowait:
+    body: 'nowait$0'
+    prefix: 'nowait'
+  onlyifdoesntexist:
+    body: 'onlyifdoesntexist$0'
+    prefix: 'onlyifdoesntexist'
+  overwrite:
+    body: 'overwrite$0'
+    prefix: 'overwrite'
+  overwritereadonly:
+    body: 'overwritereadonly$0'
+    prefix: 'overwritereadonly'
+  postinstall:
+    body: 'postinstall$0'
+    prefix: 'postinstall'
+  poweruser:
+    body: 'poweruser$0'
+    prefix: 'poweruser'
+  preservestringtype:
+    body: 'preservestringtype$0'
+    prefix: 'preservestringtype'
+  preventpinning:
+    body: 'preventpinning$0'
+    prefix: 'preventpinning'
+  program:
+    body: 'program$0'
+    prefix: 'program'
+  promptifolder:
+    body: 'promptifolder$0'
+    prefix: 'promptifolder'
+  qword:
+    body: 'qword$0'
+    prefix: 'qword'
+  read:
+    body: 'read$0'
+    prefix: 'read'
+  readexec:
+    body: 'readexec$0'
+    prefix: 'readexec'
+  readme:
+    body: 'readme$0'
+    prefix: 'readme'
+  recursesubdirs:
+    body: 'recursesubdirs$0'
+    prefix: 'recursesubdirs'
+  regserver:
+    body: 'regserver$0'
+    prefix: 'regserver'
+  regtypelib:
+    body: 'regtypelib$0'
+    prefix: 'regtypelib'
+  replacesameversion:
+    body: 'replacesameversion$0'
+    prefix: 'replacesameversion'
+  restart:
+    body: 'restart$0'
+    prefix: 'restart'
+  restartreplace:
+    body: 'restartreplace$0'
+    prefix: 'restartreplace'
+  runascurrentuser:
+    body: 'runascurrentuser$0'
+    prefix: 'runascurrentuser'
+  runasoriginaluser:
+    body: 'runasoriginaluser$0'
+    prefix: 'runasoriginaluser'
+  runhidden:
+    body: 'runhidden$0'
+    prefix: 'runhidden'
+  runminimized:
+    body: 'runminimized$0'
+    prefix: 'runminimized'
+  setntfscompression:
+    body: 'setntfscompression$0'
+    prefix: 'setntfscompression'
+  sharedfile:
+    body: 'sharedfile$0'
+    prefix: 'sharedfile'
+  shellexec:
+    body: 'shellexec$0'
+    prefix: 'shellexec'
+  skipifdoesntexist:
+    body: 'skipifdoesntexist$0'
+    prefix: 'skipifdoesntexist'
+  skipifnotsilent:
+    body: 'skipifnotsilent$0'
+    prefix: 'skipifnotsilent'
+  skipifsilent:
+    body: 'skipifsilent$0'
+    prefix: 'skipifsilent'
+  skipifsourcedoesntexist:
+    body: 'skipifsourcedoesntexist$0'
+    prefix: 'skipifsourcedoesntexist'
+  solidbreak:
+    body: 'solidbreak$0'
+    prefix: 'solidbreak'
+  sortfilesbyextension:
+    body: 'sortfilesbyextension$0'
+    prefix: 'sortfilesbyextension'
+  sortfilesbyname:
+    body: 'sortfilesbyname$0'
+    prefix: 'sortfilesbyname'
+  string:
+    body: 'string$0'
+    prefix: 'string'
+  toptobottom:
+    body: 'toptobottom$0'
+    prefix: 'toptobottom'
+  touch:
+    body: 'touch$0'
+    prefix: 'touch'
+  uilanguage:
+    body: 'uilanguage$0'
+    prefix: 'uilanguage'
+  ultra:
+    body: 'ultra$0'
+    prefix: 'ultra'
+  unchecked:
+    body: 'unchecked$0'
+    prefix: 'unchecked'
+  uninsalwaysuninstall:
+    body: 'uninsalwaysuninstall$0'
+    prefix: 'uninsalwaysuninstall'
+  uninsclearvalue:
+    body: 'uninsclearvalue$0'
+    prefix: 'uninsclearvalue'
+  uninsdeleteentry:
+    body: 'uninsdeleteentry$0'
+    prefix: 'uninsdeleteentry'
+  uninsdeletekey:
+    body: 'uninsdeletekey$0'
+    prefix: 'uninsdeletekey'
+  uninsdeletekeyifempty:
+    body: 'uninsdeletekeyifempty$0'
+    prefix: 'uninsdeletekeyifempty'
+  uninsdeletesection:
+    body: 'uninsdeletesection$0'
+    prefix: 'uninsdeletesection'
+  uninsdeletesectionifempty:
+    body: 'uninsdeletesectionifempty$0'
+    prefix: 'uninsdeletesectionifempty'
+  uninsdeletevalue:
+    body: 'uninsdeletevalue$0'
+    prefix: 'uninsdeletevalue'
+  uninsneveruninstall:
+    body: 'uninsneveruninstall$0'
+    prefix: 'uninsneveruninstall'
+  uninsnosharedfileprompt:
+    body: 'uninsnosharedfileprompt$0'
+    prefix: 'uninsnosharedfileprompt'
+  uninsremovereadonly:
+    body: 'uninsremovereadonly$0'
+    prefix: 'uninsremovereadonly'
+  uninsrestartdelete:
+    body: 'uninsrestartdelete$0'
+    prefix: 'uninsrestartdelete'
+  unsetntfscompression:
+    body: 'unsetntfscompression$0'
+    prefix: 'unsetntfscompression'
+  useapppaths:
+    body: 'useapppaths$0'
+    prefix: 'useapppaths'
+  waituntilidle:
+    body: 'waituntilidle$0'
+    prefix: 'waituntilidle'
+  waituntilterminated:
+    body: 'waituntilterminated$0'
+    prefix: 'waituntilterminated'
+  x64:
+    body: 'x64$0'
+    prefix: 'x64'
+  x86:
+    body: 'x86$0'
+    prefix: 'x86'
+  yes:
+    body: 'yes$0'
+    prefix: 'yes'
+  zip:
+    body: 'zip$0'
+    prefix: 'zip'
