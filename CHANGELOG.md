@@ -1,3 +1,8 @@
+# v3.2.0 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v3.2.0)
+
+- add section directives
+- update dependencies
+
 # v3.1.3 [#](https://github.com/idleberg/atom-language-innosetup/releases/tag/v3.1.3)
 
 - fix `anonymizerIP` parameter
