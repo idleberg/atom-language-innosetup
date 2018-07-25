@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "atom-package-deps": "^4.6.2",
-    "getmac": "^1.4.1"
+    "getmac": "^1.4.3"
   },
   "devDependencies": {
     "coffeelint-stylish": "^0.1.2",
