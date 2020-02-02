@@ -33,21 +33,6 @@ module.exports = Util =
 
     atom.workspace.open("atom://config/packages/#{meta.name}", options)
 
-  satisfyDependencies: (autoRun = false) ->
-    meta = require "../package.json"
-
-    if autoRun is true
-      require("./ga").sendEvent "util", "Satisfy Dependencies (auto)"
-    else
-      require("./ga").sendEvent "util", "Satisfy Dependencies (manual)"
-
-    require("atom-package-deps").install(meta.name, true)
-
-    for k, v of meta["package-deps"]
-      if atom.packages.isPackageDisabled(v)
-        console.log "Enabling package '#{v}'" if atom.inDevMode()
-        atom.packages.enablePackage(v)
-
   which: ->
     { platform } = require "os"
 
