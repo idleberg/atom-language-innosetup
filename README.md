@@ -1,6 +1,6 @@
 > 🚨 This package is no longer under development. If you wish to take over this project, please [get in touch](https://github.com/idleberg/discussion/discussions/2)!
-> 
-> # Inno Setup for Atom
+
+# Inno Setup for Atom
 
 [![apm](https://img.shields.io/apm/l/language-innosetup.svg?style=flat-square)](https://atom.io/packages/language-innosetup)
 [![apm](https://img.shields.io/apm/v/language-innosetup.svg?style=flat-square)](https://atom.io/packages/language-innosetup)
